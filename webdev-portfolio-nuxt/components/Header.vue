@@ -1,22 +1,40 @@
 <template>
-    <div>
+    <div class="pt-12">
         <header>
-            <nav class="fixed top-0 w-full z-50 bg-white">
-                <div class="w-full flex justify-between items-center py-8 xl:py-12">
+            <nav class="relative w-full bg-primary z-10 max-w-7xl mx-auto text-gray-800">
+                <div
+                    @mouseover="isHovered = true" 
+                    @mouseleave="isHovered = false"  
+                    class="relative z-20 bg-primary flex flex-col justify-center items-center border-2 border-gray-700 gap-6 max-w-[96rem] mx-auto px-4 py-6 xl:py-9 transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
+                    <div class="absolute top-6 xl:top-9 right-6 xl:right-9 z-20 ">
+                        <span>PL</span>
+                        <span> | </span>
+                        <span>EN</span>
+                    </div>
                     <NuxtLink to="/">
-                        <p>logo</p>
+                        <img 
+                            src='https://photo-portfolio-neon.vercel.app/img/logo3.png'
+                            alt="logo image" 
+                            class="h-12 w-fit" 
+                        />
                     </NuxtLink>
                     <!-- Hamburger menu icon for small screens -->
                     <div class="lg:hidden hover-scale-105 cursor-pointer" @click="toggleMenu">
                         <Icon name="mdi:hamburger-menu" style="color: black" />
                     </div>
                     <!-- Navigation links for larger screens -->
-                    <ul class="navbar-links hidden lg:flex gap-9 xl:gap-12">
+                    <ul class="navbar-links hidden lg:flex gap-9 xl:gap-12 font-semibold text-gray-700">
                         <li>
-                            <p>menu element</p>
+                            <p>HOME</p>
                         </li>
                         <li>
-                            <p>menu element</p>
+                            <p>MÓJ PROFIL</p>
+                        </li>
+                        <li>
+                            <p>PORTFOLIO</p>
+                        </li>
+                        <li>
+                            <p>KONTAKT</p>
                         </li>
                     </ul>
                 </div>
@@ -28,12 +46,17 @@
                         <p>menu element</p>
                     </ul>
                 </transition>
+                <div
+                    :class="{ 'translate-y-2 translate-x-2': isHovered }"
+                    class="absolute w-full h-full top-3 left-3 bg-gray-700 z-0 transition-transform duration-300 ease-in-out">
+                </div>
             </nav>
         </header>
     </div>
 </template>
 
 <script setup>
+    const isHovered = ref(false);
     const isMenuOpen = ref(false);
     const toggleMenu = () => {
         isMenuOpen.value = !isMenuOpen.value;

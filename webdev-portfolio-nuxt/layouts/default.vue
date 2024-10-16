@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="w-full">
         <Header />
-        <div class="p-6 xl:p-12 mx-auto mt-16 lg:mt-24">
+        <div class="px-6 xl:px-0 max-w-7xl mx-auto mt-16 xl:mt-24">
             <slot />
         </div>
         <Footer />
