@@ -1,0 +1,14 @@
+{
+    "header": {
+        "homepage_link": "HOME",
+        "profile_link": "MÓJ PROFIL",
+        "portfolio_link": "PORTFOLIO",
+        "contact_link": "KONTAKT"
+    },
+    "section_titles": {
+        "my_profile": "MÓJ PROFIL",
+        "tech_stack": "STACK TECHNOLOGICZNY",
+        "portfolio": "PORTFOLIO",
+        "contact": "KONTAKT"
+    }
+}

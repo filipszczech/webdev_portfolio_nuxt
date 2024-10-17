@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         pass: process.env.EMAIL_PASS,
       },
     },
-  }], '@pinia/nuxt', '@nuxt/icon'],
+  }], '@pinia/nuxt', '@nuxt/icon', '@nuxtjs/i18n'],
   mail: {
     message: {
       to: process.env.EMAIL_USER,
@@ -49,5 +49,22 @@ export default defineNuxtConfig({
   },
   supabase: {
     redirect: false
+  },
+  i18n: {
+    lazy: true,
+    langDir: 'locales',
+    strategy: 'prefix_except_default',
+    locales: [
+      {
+        code: 'pl',
+        file: 'pl.json'
+      },
+      {
+        code: 'en',
+        file: 'en.json'
+      },
+    ],
+    defaultLocale: 'pl',
+    silentTranslationWarn: true,
   },
 })

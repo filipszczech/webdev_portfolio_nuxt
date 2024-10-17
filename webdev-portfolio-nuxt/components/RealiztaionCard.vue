@@ -4,15 +4,17 @@
         <div 
             @mouseover="isHovered = true" 
             @mouseleave="isHovered = false" 
-            class="relative z-20 w-full bg-[#F1EEDB] border-2 border-gray-700 cursor-pointer transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
-            <img 
+            class="relative z-20 w-full bg-gray-100 border-2 border-gray-700 cursor-pointer transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
+            <NuxtImg 
+                format="avif" 
+                placeholder 
                 :src="img"
-                :alt="name" 
+                :alt="'portfolio - ' + currentName" 
                 class="w-full object-cover" 
             />
             <div class='flex flex-col gap-1 p-6'>
-                <h3 class='text-xl font-semibold'>{{ name }}</h3>
-                <p>{{ desc }}</p>
+                <h3 class='text-xl font-semibold'>{{ currentName }}</h3>
+                <p>{{ currentDesc }}</p>
                 <div class='flex gap-4 flex-wrap mt-3'>
                     <div v-for="tool in tools" :key="tool" class='relative bg-secondary text-white border border-black z-20'>
                         <p class='bg-secondary py-1 px-2'>{{ tool }}</p>
@@ -30,11 +32,16 @@
 </template>
 
 <script setup>
-    defineProps({
+    const props = defineProps({
         name: String,
         desc: String,
+        name_en: String,
+        desc_en: String,
         img: String,
         tools: Array
     });
     const isHovered = ref(false);
+    const { locale } = useI18n();
+    const currentName = computed(() => (locale.value === 'pl' ? props.name : props?.name_en));
+    const currentDesc = computed(() => (locale.value === 'pl' ? props.desc : props?.desc_en));
 </script>

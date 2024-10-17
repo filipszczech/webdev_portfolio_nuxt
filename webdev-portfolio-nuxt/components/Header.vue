@@ -5,11 +5,14 @@
                 <div
                     @mouseover="isHovered = true" 
                     @mouseleave="isHovered = false"  
-                    class="relative z-20 bg-primary flex flex-col justify-center items-center border-2 border-gray-700 gap-6 max-w-[96rem] mx-auto px-4 py-6 xl:py-9 transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
-                    <div class="absolute top-6 xl:top-9 right-6 xl:right-9 z-20 ">
-                        <span>PL</span>
-                        <span> | </span>
-                        <span>EN</span>
+                    class="relative z-20 bg-gray-100 flex flex-col justify-center items-center border-2 border-gray-700 gap-6 max-w-[96rem] mx-auto px-4 py-6 xl:py-9 transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
+                    <div class="absolute flex gap-3 top-6 xl:top-9 right-6 xl:right-9 z-20 ">
+                        <NuxtLink
+                            v-for="locale in locales"
+                            :key="locale.code"
+                            :to="switchLocalePath(locale.code)">
+                            {{ locale.code }}
+                        </NuxtLink>
                     </div>
                     <NuxtLink to="/">
                         <img 
@@ -23,20 +26,20 @@
                         <Icon name="mdi:hamburger-menu" style="color: black" />
                     </div>
                     <!-- Navigation links for larger screens -->
-                    <ul class="navbar-links hidden lg:flex gap-9 xl:gap-12 font-semibold text-gray-700">
-                        <li>
-                            <p>HOME</p>
-                        </li>
-                        <li>
-                            <p>MÓJ PROFIL</p>
-                        </li>
-                        <li>
-                            <p>PORTFOLIO</p>
-                        </li>
-                        <li>
-                            <p>KONTAKT</p>
-                        </li>
-                    </ul>
+                    <div class="navbar-links hidden lg:flex gap-9 xl:gap-12 font-semibold text-gray-700">
+                        <button @click="scrollToSection">
+                            <p>{{ $t('header.homepage_link') }}</p>
+                        </button    >
+                        <button @click="scrollToSection('profile_section')">
+                            <p>{{ $t('header.profile_link') }}</p>
+                        </button>
+                        <button @click="scrollToSection('portfolio_section')">
+                            <p>{{ $t('header.portfolio_link') }}</p>
+                        </button>
+                        <button @click="scrollToSection('contact_section')">
+                            <p>{{ $t('header.contact_link') }}</p>
+                        </button>
+                    </div>
                 </div>
                 <!-- Slide-out menu for small screens -->
                 <transition name="slide-down">
@@ -56,11 +59,19 @@
 </template>
 
 <script setup>
+    const switchLocalePath = useSwitchLocalePath();
+    const { locales } = useI18n();
     const isHovered = ref(false);
     const isMenuOpen = ref(false);
     const toggleMenu = () => {
         isMenuOpen.value = !isMenuOpen.value;
     }
+    const scrollToSection = (section_id) => {
+        const section = document.getElementById(section_id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 </script>
 
 <style scoped>

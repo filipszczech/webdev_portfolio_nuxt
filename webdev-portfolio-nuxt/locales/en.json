@@ -1,0 +1,14 @@
+{
+    "header": {
+        "homepage_link": "HOME",
+        "profile_link": "MY PROFILE",
+        "portfolio_link": "PORTFOLIO",
+        "contact_link": "CONTACT"
+    },
+    "section_titles": {
+        "my_profile": "MY PROFILE",
+        "tech_stack": "TECH STACK",
+        "portfolio": "PORTFOLIO",
+        "contact": "CONTACT"
+    }
+}

@@ -1,6 +1,6 @@
 <template>
-    <div class='relative z-10 max-w-7xl mx-auto bg-[#F1EEDB] text-gray-800 border-2 border-gray-700'>
-      <form class='relative z-20 bg-[#F1EEDB] grid grid-cols-2 gap-9 p-9'>
+    <div class='relative z-10 max-w-7xl mx-auto bg-gray-100 text-gray-800 border-2 border-gray-700'>
+      <form class='relative z-20 bg-gray-100 grid grid-cols-2 gap-9 p-9'>
         <input required name='name' placeholder='Imię *' type='name' class='p-3 bg-transparent border border-gray-700'/>
         <input required name='mail' placeholder='Email *' type='email' class='p-3 bg-transparent border border-gray-700'/>
         <textarea placeholder='Wiadomość' class='col-span-2 p-3 bg-transparent border border-gray-700'></textarea>
