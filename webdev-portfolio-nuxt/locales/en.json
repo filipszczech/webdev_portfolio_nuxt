@@ -9,6 +9,30 @@
         "my_profile": "MY PROFILE",
         "tech_stack": "TECH STACK",
         "portfolio": "PORTFOLIO",
-        "contact": "CONTACT"
+        "contact": "CONTACT",
+        "cv": "DOWNLOAD CV"
+    },
+    "profile": {
+        "experience": {
+            "title": "📈 Experience",
+            "position": "Junior full-stack developer",
+            "company": "Bloomvise Group",
+            "period": "July 2021 - May 2024"
+        },
+        "education": {
+            "title": "🏫 Education",
+            "degree": "Higher Education - Engineer",
+            "field": "Computer Science, Rzeszow University of Technology",
+            "period": "October 2019 - March 2023"
+        },
+        "skills": {
+            "title": "🔨 Skills",
+            "desc": "> English at B2 level, spoken and written, teamwork, communication skills, willingness to develop and learn, independence"
+        },
+        "interests": {
+            "title": "🎥 Interests",
+            "desc": "> photography, cinema, calisthenics, psychology, tennis, cycling, spending time actively"
+        }
     }
 }
+  

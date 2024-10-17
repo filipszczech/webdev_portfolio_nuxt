@@ -9,6 +9,29 @@
         "my_profile": "MÓJ PROFIL",
         "tech_stack": "STACK TECHNOLOGICZNY",
         "portfolio": "PORTFOLIO",
-        "contact": "KONTAKT"
+        "contact": "KONTAKT",
+        "cv": "POBIERZ CV"
+    },
+    "profile": {
+        "experience": {
+            "title": "📈 Doświadczenie",
+            "position": "Junior full-stack developer",
+            "company": "Bloomvise Group",
+            "period": "lipiec 2021 - maj 2024"
+        },
+        "education": {
+            "title": "🏫 Edukacja",
+            "degree": "Wykształcenie wyższe - inżynier",
+            "field": "Informatyka, Politechnika Rzeszowska im. Ignacego Łukasiewicza",
+            "period": "październik 2019 - marzec 2023"
+        },
+        "skills": {
+            "title": "🔨 Umiejętności",
+            "desc": "język angielski na poziomie B2 w mowie i piśmie, praca w zespole, komunikatywność, chęć do rozwoju i nauki, samodzielność"
+        },
+        "interests": {
+            "title": "🎥 Zainteresowania",
+            "desc": "> fotografia, kino, kalistenika, psychologia, tenis, kolarstwo, aktywne spędzenie czasu"
+        }
     }
 }

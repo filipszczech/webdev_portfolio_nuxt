@@ -1,17 +1,25 @@
 <template>
     <div class="pt-12">
         <header>
-            <nav class="relative w-full bg-primary z-10 max-w-7xl mx-auto text-gray-800">
+            <nav class="relative w-full bg-transparent z-10 max-w-7xl mx-auto text-gray-800">
                 <div
                     @mouseover="isHovered = true" 
                     @mouseleave="isHovered = false"  
-                    class="relative z-20 bg-gray-100 flex flex-col justify-center items-center border-2 border-gray-700 gap-6 max-w-[96rem] mx-auto px-4 py-6 xl:py-9 transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
-                    <div class="absolute flex gap-3 top-6 xl:top-9 right-6 xl:right-9 z-20 ">
+                    class="relative z-20 bg-gray-100 dark:bg-gray-400 flex flex-col justify-center items-center border-2 border-gray-700 gap-6 max-w-[96rem] mx-auto px-4 py-6 xl:py-9 transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
+                    <div class="absolute flex gap-3 items-center top-6 xl:top-9 right-6 xl:right-9 z-20">
+                        <button @click="setColorTheme($colorMode.preference === 'dark' ? 'light': 'dark')">
+                            <Icon v-if="$colorMode.preference === 'light'" name="noto-v1:last-quarter-moon-face" size="2rem" />
+                            <Icon v-else-if="$colorMode.preference === 'dark'" name="emojione:sun-with-face" size="2rem" />
+                        </button>
                         <NuxtLink
-                            v-for="locale in locales"
-                            :key="locale.code"
-                            :to="switchLocalePath(locale.code)">
-                            {{ locale.code }}
+                            v-for="l in availableLocales"
+                            :key="l.code"
+                            :to="switchLocalePath(l.code)"
+                            class="">
+                            <div class="">
+                                <Icon v-if="l.code === 'pl'" name="flag:pl-4x3" size="2rem" />
+                                <Icon v-else-if="l.code === 'en'" name="flag:us-4x3" size="2rem" />
+                            </div>
                         </NuxtLink>
                     </div>
                     <NuxtLink to="/">
@@ -60,18 +68,24 @@
 
 <script setup>
     const switchLocalePath = useSwitchLocalePath();
-    const { locales } = useI18n();
+    const { locale, locales } = useI18n();
     const isHovered = ref(false);
     const isMenuOpen = ref(false);
     const toggleMenu = () => {
         isMenuOpen.value = !isMenuOpen.value;
-    }
+    };
     const scrollToSection = (section_id) => {
         const section = document.getElementById(section_id);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
     };
+    const setColorTheme = (theme) => {
+        useColorMode().preference = theme;
+    };
+    const availableLocales = computed(() => {
+        return locales.value.filter(i => i.code !== locale.value);
+    });
 </script>
 
 <style scoped>

@@ -4,7 +4,7 @@
         <div 
             @mouseover="isHovered = true" 
             @mouseleave="isHovered = false" 
-            class="relative z-20 w-full bg-gray-100 border-2 border-gray-700 cursor-pointer transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
+            class="relative z-20 w-full bg-gray-100 dark:bg-gray-400 border-2 border-gray-700 cursor-pointer transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
             <NuxtImg 
                 format="avif" 
                 placeholder 

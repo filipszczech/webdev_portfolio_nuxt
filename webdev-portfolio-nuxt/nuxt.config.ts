@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         pass: process.env.EMAIL_PASS,
       },
     },
-  }], '@pinia/nuxt', '@nuxt/icon', '@nuxtjs/i18n'],
+  }], '@pinia/nuxt', '@nuxt/icon', '@nuxtjs/i18n', '@nuxtjs/color-mode'],
   mail: {
     message: {
       to: process.env.EMAIL_USER,
@@ -66,5 +66,18 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'pl',
     silentTranslationWarn: true,
+  },
+  colorMode: {
+    classSuffix: '',
+    preference: 'light',
+    fallback: 'light',
+  },
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config.js',
+    exposeConfig: false,
+    config: {},
+    injectPosition: 0,
+    viewer: true,
   },
 })
