@@ -1,6 +1,5 @@
 <template>
-    <div class="relative w-full object-cover z-10">
-        <!-- main card div -->
+    <div @click="handleClick" class="relative w-full object-cover z-10">
         <div 
             @mouseover="isHovered = true" 
             @mouseleave="isHovered = false" 
@@ -23,7 +22,6 @@
                 </div>
             </div>
         </div>
-        <!-- div to move -->
         <div
             :class="{ 'translate-y-2 translate-x-2': isHovered }"
             class="absolute w-full h-full top-3 left-3 bg-gray-700 z-0 transition-transform duration-300 ease-in-out">
@@ -40,8 +38,14 @@
         img: String,
         tools: Array
     });
+    const emit = defineEmits(['click']);
     const isHovered = ref(false);
     const { locale } = useI18n();
+
     const currentName = computed(() => (locale.value === 'pl' ? props.name : props?.name_en));
     const currentDesc = computed(() => (locale.value === 'pl' ? props.desc : props?.desc_en));
+
+    function handleClick() {
+        emit('click');
+    }
 </script>

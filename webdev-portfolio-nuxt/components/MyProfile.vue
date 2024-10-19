@@ -1,6 +1,7 @@
 <template>
         <div class="grid grid-cols-3 gap-9 xl:gap-16">
-        <div class="col-span-2 flex flex-col gap-6 text-lg xl:pr-16 dark:text-gray-400">
+        <div class="col-span-3 lg:col-span-2 flex flex-col gap-6 text-base lg:text-lg xl:pr-16 dark:text-gray-400">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-400">{{ $t('section_titles.my_profile') }}</h2>
             <div>
                 <h3 class="font-semibold">{{ $t('profile.experience.title') }}</h3>
                 <p>{{ $t('profile.experience.position') }}</p>
@@ -22,7 +23,7 @@
                 <p>{{ $t('profile.interests.desc') }}</p>
             </div>
         </div>
-        <div class="h-fit bg-gray-100 dark:bg-gray-400 p-4 border-2 border-gray-700">
+        <div class="col-span-3 lg:col-span-1 h-fit w-fit bg-gray-100 dark:bg-gray-400 p-4 border-2 border-gray-700">
             <NuxtImg format="avif" placeholder src="https://invicpjbigavhuttylvh.supabase.co/storage/v1/object/public/photo-portfolio/botaniczny/ob8.jpg" />
         </div>
         </div>
@@ -32,3 +33,10 @@
 <script setup>
 
 </script>
+
+<style scoped>
+    h2 {
+        /* font-family: "Russo One", sans-serif; */
+        font-family: "Righteous", sans-serif;
+    }
+</style>
