@@ -28,7 +28,7 @@
                 </span>
             </div>
         </section>
-        <section id="tech_stack" class="my-16 md:my-24">
+        <section id="cv_section" class="my-16 md:my-24">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.cv') }}</h2>
             <div v-if="cvPending">Loading...</div>
             <div v-else-if="cvError">{{ cvError.message }}</div>
@@ -43,7 +43,10 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.contact') }}</h2>
             <ContactForm />
         </section>
+        <!-- toast -->
         <Toast v-for="toast in toasts" :key="toast.id" :message="toast.message" :duration="toast.duration" />
+        <!-- scroll to top -->
+        <ScrollToTop />
         <!-- modals -->
         <RealizationModal 
             v-if="isProjectModalOpen" 

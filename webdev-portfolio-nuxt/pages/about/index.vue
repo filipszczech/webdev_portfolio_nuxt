@@ -57,6 +57,8 @@
                 </ul>
             </div>
         </section>
+        <!-- scroll to top -->
+        <ScrollToTop />
     </div>
 </template>
 
