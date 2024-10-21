@@ -3,7 +3,9 @@
         "homepage_link": "HOME",
         "profile_link": "MÓJ PROFIL",
         "portfolio_link": "PORTFOLIO",
-        "contact_link": "KONTAKT"
+        "contact_link": "KONTAKT",
+        "about_page": "O STRONIE",
+        "back_to_homepage": "POWRÓT DO STRONY"
     },
     "section_titles": {
         "my_profile": "MÓJ PROFIL",
@@ -32,6 +34,46 @@
         "interests": {
             "title": "🎥 Zainteresowania",
             "desc": "> fotografia, kino, kalistenika, psychologia, tenis, kolarstwo, aktywne spędzenie czasu"
+        }
+    },
+    "tech_stack": {
+        "languages": "🌐 Języki:",
+        "frameworks": "💡 Frameworki:",
+        "tools": "🔨 Narzędzia:"
+    },
+    "portfolio": {
+        "github": "Więcej na moim"
+    },
+    "cv": {
+        "view": "Wyświetl"
+    },
+    "contact": {
+        "p1": "Mam nadzieję, że mój profil Ci się spodobał! :)",
+        "p2": "Jeśli tak, zapraszam do kontaktu.",
+        "form_name": "Imię *",
+        "form_message": "Wiadomość *",
+        "form_company": "Firma",
+        "form_send": "Wyślij"
+    },
+    "about": {
+        "project_info": {
+            "title": "Informacje o projekcie",
+            "description": "Strona została w pełni zaprojektowana i zaimplementowana przeze mnie. Tworząc projekty dla siebie staram się zadbać o nowoczesny stack technologiczny, jak najlepszy user experience i niskie koszty utrzymania.",
+            "tech_stack": "Stack technologiczny strony:",
+            "github_project": "Projekt na githubie:",
+            "color_palette": "Paleta kolorów:",
+            "used_packages": "Zastosowane paczki:",
+            "packages_list": [
+                "nuxtjs/supabase - implementacja backendu z BaaS od Supabase,",
+                "nuxtjs/tailwindcss - style,",
+                "nuxt/image - optymalizacja plików zdjęciowych,",
+                "vee-validate - walidacja formularzy,",
+                "nuxt-mail - przesyłanie maili,",
+                "nuxt/icon - baza darmowych customowalnych ikon,",
+                "nuxtjs/i18n - wielojęzykowość,",
+                "nuxtjs/color-mode - implementacja trybu ciemnego,",
+                "nuxt/fonts - baza i łatwe pozyskiwanie fontów."
+            ]
         }
     }
 }

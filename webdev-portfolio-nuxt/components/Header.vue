@@ -37,10 +37,10 @@
                     </div>
                     <div v-if="route.path != localePath('index')" class="navbar-links hidden lg:flex gap-9 xl:gap-12 font-semibold text-gray-700">
                         <NuxtLink :to="localePath('/')" class="transition-all duration-300 hover:scale-110">
-                            POWRÓT DO STRONY
+                            {{ $t('header.back_to_homepage') }}
                         </NuxtLink>
                         <NuxtLink :to="localePath('/about')" class="transition-all duration-300 hover:scale-110">
-                            <span>O STRONIE</span>
+                            <span>{{ $t('header.about_page') }}</span>
                         </NuxtLink>
                     </div>
                     <!-- Navigation links for larger screens -->
@@ -58,7 +58,7 @@
                             <p>{{ $t('header.contact_link') }}</p>
                         </button>
                         <NuxtLink :to="localePath('/about')" class="transition-all duration-300 hover:scale-110">
-                            <span>O STRONIE</span>
+                            <span>{{ $t('header.about_page') }}</span>
                         </NuxtLink>
                     </div>
                     <!-- Slide-out menu for small screens -->
@@ -86,19 +86,19 @@
                             </li>
                             <li>
                                 <NuxtLink :to="localePath('/about')">
-                                    <span>O STRONIE</span>
+                                    <span>{{ $t('header.about_page') }}</span>
                                 </NuxtLink>
                             </li>
                         </ul>
                         <ul v-else-if="isMenuOpen && route.path != localePath('index')" class="flex flex-col justify-center items-center gap-4 lg:hidden">
                             <li>
                                 <NuxtLink :to="localePath('/')" class="transition-all duration-300 hover:scale-110">
-                                    POWRÓT DO STRONY
+                                    {{ $t('header.back_to_homepage') }}
                                 </NuxtLink>
                             </li>
                             <li>
                                 <NuxtLink :to="localePath('/about')" class="transition-all duration-300 hover:scale-110">
-                                    <span>O STRONIE</span>
+                                    <span>{{ $t('header.about_page') }}</span>
                                 </NuxtLink>
                             </li>
                         </ul>

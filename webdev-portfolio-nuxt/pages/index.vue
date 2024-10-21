@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="flex justify-center gap-2 items-center content-center mt-9">
-                <p class="text-lg text-center font-semibold">Więcej na moim</p>
+                <p class="text-lg text-center font-semibold">{{ $t('portfolio.github') }}</p>
                 <span>
                     <a href="https://github.com/filipszczech/" target="_blank" class="">
                         <img alt="techstack icon" class="h-10" src="https://pngimg.com/uploads/github/github_PNG15.png"/>

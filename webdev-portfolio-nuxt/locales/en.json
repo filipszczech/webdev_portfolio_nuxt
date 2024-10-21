@@ -3,7 +3,9 @@
         "homepage_link": "HOME",
         "profile_link": "MY PROFILE",
         "portfolio_link": "PORTFOLIO",
-        "contact_link": "CONTACT"
+        "contact_link": "CONTACT",
+        "about_page": "ABOUT PAGE",
+        "back_to_homepage": "GO BACK TO THE PAGE"
     },
     "section_titles": {
         "my_profile": "MY PROFILE",
@@ -32,6 +34,46 @@
         "interests": {
             "title": "🎥 Interests",
             "desc": "> photography, cinema, calisthenics, psychology, tennis, cycling, spending time actively"
+        }
+    },
+    "tech_stack": {
+        "languages": "🌐 Languages:",
+        "frameworks": "💡 Frameworks:",
+        "tools": "🔨 Tools:"
+    },
+    "portfolio": {
+        "github": "More on my"
+    },
+    "cv": {
+        "view": "View"
+    },
+    "contact": {
+        "p1": "I hope you liked my profile! :)",
+        "p2": "If so, feel free to contact me.",
+        "form_name": "Name *",
+        "form_message": "Message *",
+        "form_company": "Company",
+        "form_send": "Send"
+    },
+    "about": {
+        "project_info": {
+            "title": "About the Project",
+            "description": "This website has been fully designed and implemented by me. When creating projects for myself, I strive to ensure a modern tech stack, optimal user experience, and low maintenance costs.",
+            "tech_stack": "Technology Stack of the Website:",
+            "github_project": "Project on GitHub:",
+            "color_palette": "Color Palette:",
+            "used_packages": "Used Packages:",
+            "packages_list": [
+                "nuxtjs/supabase - backend implementation with BaaS from Supabase,",
+                "nuxtjs/tailwindcss - styles,",
+                "nuxt/image - image file optimization,",
+                "vee-validate - form validation,",
+                "nuxt-mail - email sending,",
+                "nuxt/icon - a base of free customizable icons,",
+                "nuxtjs/i18n - multilingual support,",
+                "nuxtjs/color-mode - dark mode implementation,",
+                "nuxt/fonts - a base and easy retrieval of fonts."
+            ]
         }
     }
 }

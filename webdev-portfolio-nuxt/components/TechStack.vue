@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col gap-6 xl:gap-9 text-lg dark:text-gray-400">
         <div>
-            <p class="mb-3 font-semibold">🌐 Języki:</p>
+            <p class="mb-3 font-semibold">{{ $t('tech_stack.languages') }}</p>
             <div class="flex gap-5 lg:gap-6 flex-wrap">
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/JavaScript.svg"/>
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/TypeScript.svg"/>
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div>
-            <p class="mb-3 font-semibold">💡 Frameworki:</p>
+            <p class="mb-3 font-semibold">{{ $t('tech_stack.frameworks') }}</p>
             <div class="flex gap-5 lg:gap-6 flex-wrap">
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Vue.js.svg"/>
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Nuxt-JS.svg"/>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div>
-            <p class="mb-3 font-semibold">🔨 Narzędzia:</p>
+            <p class="mb-3 font-semibold">{{ $t('tech_stack.tools') }}</p>
             <div class="flex gap-5 lg:gap-6 flex-wrap">
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Webpack.svg"/>
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/NPM.svg"/>
