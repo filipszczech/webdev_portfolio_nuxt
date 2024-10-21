@@ -15,14 +15,17 @@
                 <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="w-full col-span-6 sm:col-span-3 lg:col-span-2">
                     <RealiztaionCard
                         @click="openProjectModal(project)"
-                        :name="project.name"
-                        :desc="project.desc"
-                        :name_en="project.name_en"
-                        :desc_en="project.desc_en"
-                        :img="project.img"
-                        :tools="project.tools" 
+                        :project="project"
                     />
                 </div>
+            </div>
+            <div class="flex justify-center gap-2 items-center content-center mt-9">
+                <p class="text-lg text-center font-semibold">Więcej na moim</p>
+                <span>
+                    <a href="https://github.com/filipszczech/" target="_blank" class="">
+                        <img alt="techstack icon" class="h-10" src="https://pngimg.com/uploads/github/github_PNG15.png"/>
+                    </a>
+                </span>
             </div>
         </section>
         <section id="tech_stack" class="my-16 md:my-24">
@@ -36,10 +39,12 @@
                 />
             </div>
         </section>
-        <section id="contact_section" class="mt-16 md:mt-24 mb-24">
+        <section id="contact_section" class="mt-16 md:mt-24 mb-24 lg:mb-32">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.contact') }}</h2>
             <ContactForm />
         </section>
+        <Toast v-for="toast in toasts" :key="toast.id" :message="toast.message" :duration="toast.duration" />
+        <!-- modals -->
         <RealizationModal 
             v-if="isProjectModalOpen" 
             :project="selectedProject" 
@@ -58,6 +63,7 @@
     const isProjectModalOpen = ref(false);
     const isCvModalOpen = ref(false);
     const selectedProject = ref(null);
+    const { toasts } = useToast();
 
     function openCvModal() {
         isCvModalOpen.value = true;
@@ -81,6 +87,15 @@
     const { data: cv, pending: cvPending, error: cvError } = await useAsyncData('cv_document', () =>
         useSupabaseFetch('cv_documents', { active: true }, true)
     );
+    useHead({
+        title: "Filip Szczęch | portfolio",
+        meta: [
+            { name: 'description', content: 'Web developer portfolio created in nuxt, including cv, skills and projects. (homepage)' }
+        ],
+        htmlAttrs: {
+            lang: 'pl'
+        },
+    });
 </script>
 
 <style scoped>

@@ -7,7 +7,7 @@
             <NuxtImg 
                 format="avif" 
                 placeholder 
-                :src="img"
+                :src="project.img"
                 :alt="'portfolio - ' + currentName" 
                 class="w-full object-cover" 
             />
@@ -15,7 +15,7 @@
                 <h3 class='text-xl font-semibold'>{{ currentName }}</h3>
                 <p>{{ currentDesc }}</p>
                 <div class='flex gap-4 flex-wrap mt-3'>
-                    <div v-for="tool in tools" :key="tool" class='relative bg-secondary text-white border border-black z-20'>
+                    <div v-for="tool in project.tools" :key="tool" class='relative bg-secondary text-white border border-black z-20'>
                         <p class='bg-secondary py-1 px-2'>{{ tool }}</p>
                         <div class='absolute bg-gray-700 w-full h-full left-[0.35rem] top-[0.35rem] -z-20'></div>
                     </div>
@@ -31,19 +31,14 @@
 
 <script setup>
     const props = defineProps({
-        name: String,
-        desc: String,
-        name_en: String,
-        desc_en: String,
-        img: String,
-        tools: Array
+        project: Object,
     });
     const emit = defineEmits(['click']);
     const isHovered = ref(false);
     const { locale } = useI18n();
 
-    const currentName = computed(() => (locale.value === 'pl' ? props.name : props?.name_en));
-    const currentDesc = computed(() => (locale.value === 'pl' ? props.desc : props?.desc_en));
+    const currentName = computed(() => (locale.value === 'pl' ? props.project.name : props?.project.name_en));
+    const currentDesc = computed(() => (locale.value === 'pl' ? props.project.desc : props?.project.desc_en));
 
     function handleClick() {
         emit('click');

@@ -16,9 +16,11 @@
     "@nuxtjs/i18n": "^8.5.5",
     "@nuxtjs/supabase": "^1.4.1",
     "@pinia/nuxt": "^0.5.5",
+    "@vee-validate/yup": "^4.14.3",
     "nuxt": "^3.13.0",
     "nuxt-mail": "^5.1.1",
     "pinia": "^2.2.4",
+    "vee-validate": "^4.14.3",
     "vue": "latest",
     "vue-router": "latest"
   },

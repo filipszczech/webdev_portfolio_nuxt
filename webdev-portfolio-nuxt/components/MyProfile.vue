@@ -25,6 +25,11 @@
         </div>
         <div class="col-span-3 lg:col-span-1 h-fit w-fit bg-gray-100 dark:bg-gray-400 p-4 border-2 border-gray-700">
             <NuxtImg format="avif" placeholder src="https://invicpjbigavhuttylvh.supabase.co/storage/v1/object/public/photo-portfolio/botaniczny/ob8.jpg" />
+            <div class="flex gap-4 justify-center mt-4 text-red-500">
+                <Icon name="mdi:github" size="2.5rem" />
+                <Icon name="mdi:linkedin" size="2.5rem" />
+                <Icon name="mdi:instagram" size="2.5rem" />
+            </div>
         </div>
         </div>
   </template>

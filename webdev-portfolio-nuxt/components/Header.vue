@@ -34,9 +34,6 @@
                     </div>
                     <!-- Navigation links for larger screens -->
                     <div class="navbar-links hidden lg:flex gap-9 xl:gap-12 font-semibold text-gray-700">
-                        <button @click="scrollToSection">
-                            <p>{{ $t('header.homepage_link') }}</p>
-                        </button    >
                         <button @click="scrollToSection('profile_section')">
                             <p>{{ $t('header.profile_link') }}</p>
                         </button>
@@ -46,7 +43,7 @@
                         <button @click="scrollToSection('contact_section')">
                             <p>{{ $t('header.contact_link') }}</p>
                         </button>
-                        <NuxtLink to="/">
+                        <NuxtLink to="/about">
                             <span>O STRONIE</span>
                         </NuxtLink>
                     </div>
