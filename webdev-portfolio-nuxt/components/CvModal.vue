@@ -2,7 +2,7 @@
     <div>
         <ModalContainer :isOpen="isCvModalOpen" @close="closeModal">
             <template #default>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400 uppercase">Podgląd cv</h2>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400 uppercase">{{ $t('cv.modal_title') }}</h2>
                 <img :src="currentImg" alt="CV" class="w-full" />
             </template>
         </ModalContainer>

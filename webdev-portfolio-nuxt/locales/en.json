@@ -28,7 +28,7 @@
             "period": "October 2019 - March 2023"
         },
         "skills": {
-            "title": "🔨 Skills",
+            "title": "⚡ Skills",
             "desc": "> English at B2 level, spoken and written, teamwork, communication skills, willingness to develop and learn, independence"
         },
         "interests": {
@@ -42,13 +42,18 @@
         "tools": "🔨 Tools:"
     },
     "portfolio": {
-        "github": "More on my"
+        "github": "More on my",
+        "modal_tasks": "My tasks:",
+        "modal_tech_stack": "Tech stack:",
+        "modal_other_tools": "Other tools:",
+        "modal_link": "Project link:"
     },
     "cv": {
-        "view": "View"
+        "view": "Download",
+        "modal_title": "Cv overview"
     },
     "contact": {
-        "p1": "I hope you liked my profile! :)",
+        "p1": "I hope you liked my profile! 😊",
         "p2": "If so, feel free to contact me.",
         "form_name": "Name *",
         "form_message": "Message *",

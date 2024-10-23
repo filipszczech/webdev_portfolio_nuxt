@@ -1,14 +1,14 @@
 <template>
     <div class="">
-        <section id="profile_section" class="mt-12 mb-16 lg:mt-24 lg:mb-24">
+        <section id="profile_section" class="mt-8 sm:mt-12 mb-16 lg:mt-24 lg:mb-24">
             <MyProfile />
         </section>
         <section id="tech_stack" class="my-16 md:my-24">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.tech_stack') }}</h2>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.tech_stack') }}</h2>
             <TechStack />
         </section>
         <section id="portfolio_section" class="mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.portfolio') }}</h2>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.portfolio') }}</h2>
             <div v-if="projectsPending">Loading...</div>
             <div v-else-if="projectsError">{{ projectsError.message }}</div>
             <div v-else class="grid grid-cols-6 gap-9 xl:gap-16 grid-auto-rows-[minmax(0,_1fr)]">
@@ -20,16 +20,16 @@
                 </div>
             </div>
             <div class="flex justify-center gap-2 items-center content-center mt-9">
-                <p class="text-lg text-center font-semibold">{{ $t('portfolio.github') }}</p>
+                <p class="text-lg text-center font-semibold dark:text-gray-400">{{ $t('portfolio.github') }}</p>
                 <span>
                     <a href="https://github.com/filipszczech/" target="_blank" class="">
-                        <img alt="techstack icon" class="h-10" src="https://pngimg.com/uploads/github/github_PNG15.png"/>
+                        <NuxtImg format="avif" placeholder alt="techstack icon" class="h-10" src="https://pngimg.com/uploads/github/github_PNG15.png"/>
                     </a>
                 </span>
             </div>
         </section>
         <section id="cv_section" class="my-16 md:my-24">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.cv') }}</h2>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.cv') }}</h2>
             <div v-if="cvPending">Loading...</div>
             <div v-else-if="cvError">{{ cvError.message }}</div>
             <div v-else>
@@ -40,7 +40,7 @@
             </div>
         </section>
         <section id="contact_section" class="mt-16 md:mt-24 mb-24 lg:mb-32">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.contact') }}</h2>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.contact') }}</h2>
             <ContactForm />
         </section>
         <!-- toast -->

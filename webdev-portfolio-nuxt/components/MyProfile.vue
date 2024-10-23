@@ -1,7 +1,7 @@
 <template>
         <div class="grid grid-cols-3 gap-9 xl:gap-16">
         <div class="col-span-3 lg:col-span-2 flex flex-col gap-6 text-base lg:text-lg xl:pr-16 dark:text-gray-400">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-400">{{ $t('section_titles.my_profile') }}</h2>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-400">{{ $t('section_titles.my_profile') }}</h2>
             <div>
                 <h3 class="font-semibold">{{ $t('profile.experience.title') }}</h3>
                 <p>{{ $t('profile.experience.position') }}</p>

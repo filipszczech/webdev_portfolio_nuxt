@@ -3,7 +3,7 @@
         <div 
             @mouseover="isHovered = true" 
             @mouseleave="isHovered = false" 
-            class="relative z-20 w-full bg-gray-100 dark:bg-gray-400 border-2 border-gray-700 cursor-pointer transition-transform duration-300 ease-in-out transform hover:-translate-y-2 hover:-translate-x-2">
+            class="relative z-20 w-full bg-gray-100 dark:bg-gray-400 border-2 border-gray-700 cursor-pointer transition-transform duration-300 ease-in-out transform md:hover:-translate-y-2 md:hover:-translate-x-2">
             <NuxtImg 
                 format="avif" 
                 placeholder 
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div
-            :class="{ 'translate-y-2 translate-x-2': isHovered }"
+            :class="{ 'md:translate-y-2 md:translate-x-2': isHovered }"
             class="absolute w-full h-full top-3 left-3 bg-gray-700 z-0 transition-transform duration-300 ease-in-out">
         </div>
     </div>

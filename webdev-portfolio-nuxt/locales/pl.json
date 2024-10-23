@@ -28,7 +28,7 @@
             "period": "październik 2019 - marzec 2023"
         },
         "skills": {
-            "title": "🔨 Umiejętności",
+            "title": "⚡ Umiejętności",
             "desc": "język angielski na poziomie B2 w mowie i piśmie, praca w zespole, komunikatywność, chęć do rozwoju i nauki, samodzielność"
         },
         "interests": {
@@ -42,13 +42,18 @@
         "tools": "🔨 Narzędzia:"
     },
     "portfolio": {
-        "github": "Więcej na moim"
+        "github": "Więcej na moim",
+        "modal_tasks": "Moje zadania:",
+        "modal_tech_stack": "Stack technologiczny:",
+        "modal_other_tools": "Inne narzędzia:",
+        "modal_link": "Link do projektu:"
     },
     "cv": {
-        "view": "Wyświetl"
+        "view": "Pobierz",
+        "modal_title": "Podgląd cv"
     },
     "contact": {
-        "p1": "Mam nadzieję, że mój profil Ci się spodobał! :)",
+        "p1": "Mam nadzieję, że mój profil Ci się spodobał! 😊",
         "p2": "Jeśli tak, zapraszam do kontaktu.",
         "form_name": "Imię *",
         "form_message": "Wiadomość *",

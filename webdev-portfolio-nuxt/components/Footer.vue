@@ -14,7 +14,7 @@
                             <Icon name="mdi:instagram" size="2.5rem" />
                         </a>
                     </div>
-                    <p class="text-center dark:text-gray-400">Coded and designed by Filip Szczęch.</p>
+                    <p class="text-center dark:text-gray-400 px-6">Coded and designed by Filip Szczęch.</p>
                 </div>
             </div>
         </footer>

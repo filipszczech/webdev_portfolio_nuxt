@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="md:text-lg mb-16 md:mb-24 text-gray-700 dark:text-gray-400">
-            <h1 class="text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('about.project_info.title') }}</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('about.project_info.title') }}</h1>
             <p class="md:pr-48">{{ $t('about.project_info.description') }}</p>
             <div class="mt-6 xl:mt-9">
                 <h2 class="mb-3">{{ $t('about.project_info.tech_stack') }}</h2>
