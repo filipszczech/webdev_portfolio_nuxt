@@ -11,7 +11,7 @@
       meta: [
         { name: "title", content: 'Web developer portfolio - Filip Szczęch' },
         { name: "description", content: 'Web developer portfolio created in nuxt, including cv, skills and projects.' },
-        { property: 'og:url', content: '' },
+        { property: 'og:url', content: 'https://www.filipszczech-dev.pl/' },
         { property: 'og:title', content: 'Web developer portfolio - Filip Szczęch' },
         { property: 'og:description', content: 'Web developer portfolio created in nuxt, including cv, skills and projects.' },
         { property: 'og:image', content: 'https://wrwtorrdungvuhnltrxj.supabase.co/storage/v1/object/public/webdev%20portfolio/portfolio6.png' },

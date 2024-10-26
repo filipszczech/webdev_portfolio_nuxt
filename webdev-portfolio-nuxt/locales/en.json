@@ -68,6 +68,7 @@
             "github_project": "Project on GitHub:",
             "color_palette": "Color Palette:",
             "used_packages": "Used Packages:",
+            "endpoint_list": "Endpoints list:",
             "packages_list": [
                 "nuxtjs/supabase - backend implementation with BaaS from Supabase,",
                 "nuxtjs/tailwindcss - styles,",
@@ -77,6 +78,8 @@
                 "nuxt/icon - a base of free customizable icons,",
                 "nuxtjs/i18n - multilingual support,",
                 "nuxtjs/color-mode - dark mode implementation,",
+                "nuxtjs/robots - robots.txt handling,",
+                "nuxtjs/sitemap - for sitemap,",
                 "nuxt/fonts - a base and easy retrieval of fonts."
             ]
         }

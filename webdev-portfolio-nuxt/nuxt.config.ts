@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         pass: process.env.EMAIL_PASS,
       },
     },
-  }], '@pinia/nuxt', '@nuxt/icon', '@nuxtjs/i18n', '@nuxtjs/color-mode', '@nuxt/fonts'],
+  }], '@pinia/nuxt', '@nuxt/icon', '@nuxtjs/i18n', '@nuxtjs/color-mode', '@nuxt/fonts', '@nuxtjs/sitemap', '@nuxtjs/robots'],
   mail: {
     message: {
       to: process.env.EMAIL_USER,
@@ -79,5 +79,16 @@ export default defineNuxtConfig({
     config: {},
     injectPosition: 0,
     viewer: true,
+  },
+  site: {
+    url: 'https://filipszczech-dev.pl',
+    name: 'Filip Szczęch - webdev portfolio'
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: '', 
+    sitemap: [
+      'https://filipszczech-dev.pl/sitemap.xml',
+    ],
   },
 })

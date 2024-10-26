@@ -31,6 +31,17 @@
                     </a>
                 </div>
             </div>
+            <div class="mt-6 xl:mt-9 text-gray-700 dark:text-gray-400">
+                <EndpointList />
+            </div>
+            <div class="mt-9 xl:mt-12">
+                <h2 class="mb-3">{{ $t('about.project_info.used_packages') }}</h2>
+                <ul class="list-disc pl-8">
+                    <li v-for="p, in $tm('about.project_info.packages_list')" :key="p" class="mb-2">
+                        @{{ $rt(p) }}
+                    </li>
+                </ul>
+            </div>
             <div class="mt-6 xl:mt-9">
                 <h2 class="mb-3">{{ $t('about.project_info.color_palette') }}</h2>
                 <div class="flex flex-wrap border-2 border-black w-fit">
@@ -41,14 +52,6 @@
                     <div class="w-9 h-9 lg:w-16 lg:h-16 bg-secondary"></div>
                     <div class="w-9 h-9 lg:w-16 lg:h-16 bg-red-500"></div>
                 </div>
-            </div>
-            <div class="mt-6 xl:mt-9">
-                <h2 class="mb-3">{{ $t('about.project_info.used_packages') }}</h2>
-                <ul class="list-disc pl-8">
-                    <li v-for="p, in $tm('about.project_info.packages_list')" :key="p" class="mb-2">
-                        @{{ $rt(p) }}
-                    </li>
-                </ul>
             </div>
         </section>
         <!-- scroll to top -->

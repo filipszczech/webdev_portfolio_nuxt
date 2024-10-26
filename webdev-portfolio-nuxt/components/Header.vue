@@ -14,9 +14,9 @@
                         </NuxtLink>
                         <div class="col-span-3 lg:col-span-1 flex gap-3 items-center justify-center lg:justify-end">
                             <!-- theme swith -->
-                            <button @click="setColorTheme($colorMode.preference === 'dark' ? 'light': 'dark')" class="transition-all duration-300 hover:scale-110">
+                            <button aria-label="change color mode" @click="setColorTheme($colorMode.preference === 'dark' ? 'light': 'dark')" class="transition-all duration-300 hover:scale-110">
                                 <Icon v-if="$colorMode.preference === 'light'" name="noto-v1:last-quarter-moon-face" size="2rem" />
-                                <Icon v-else-if="$colorMode.preference === 'dark'" name="emojione:sun-with-face" size="2rem" />
+                                <Icon v-else name="emojione:sun-with-face" size="2rem" />
                             </button>
                             <!-- language switch -->
                             <NuxtLink
@@ -24,10 +24,10 @@
                                 :key="l.code"
                                 :to="switchLocalePath(l.code)"
                                 class="">
-                                <div class="transition-all duration-300 hover:scale-105">
+                                <button aria-label="change language" class="transition-all duration-300 hover:scale-105">
                                     <Icon v-if="l.code === 'pl'" name="flag:pl-4x3" size="2rem" />
                                     <Icon v-else-if="l.code === 'en'" name="flag:us-4x3" size="2rem" />
-                                </div>
+                                </button>
                             </NuxtLink>
                         </div>
                     </div>
