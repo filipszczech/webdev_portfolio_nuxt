@@ -9,6 +9,10 @@
             :exampleData="cv"
             endpointType="GET"
             endpointPath="/cv-documents" />
+        <EndpointListElement
+            :exampleData="profile"
+            endpointType="GET"
+            endpointPath="/profiles" />
     </div>
   </template>
   
@@ -19,6 +23,9 @@
     
     const { data: cv, pending: cvPending, error: cvError } = await useAsyncData('cv_document', () =>
         useSupabaseFetch('cv_documents', { active: true }, true)
+    );
+    const { data: profile, pending: profilePending, error: profileError } = await useAsyncData('profile', () =>
+        useSupabaseFetch('profiles', { active: true }, true)
     );
   </script>
   

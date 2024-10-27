@@ -58,7 +58,7 @@
 </script>
 
 <style scoped>
-    h2 {
+    h1, h2 {
         /* font-family: "Russo One", sans-serif; */
         font-family: "Righteous", sans-serif;
     }

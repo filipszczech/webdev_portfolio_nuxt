@@ -1,8 +1,7 @@
 <template>
     <div class="">
         <section id="profile_section" class="mt-8 sm:mt-12 mb-16 lg:mt-24 lg:mb-24">
-            <div v-if="profilePending">Loading...</div>
-            <div v-else-if="profileError">{{ profileError.message }}</div>
+            <div v-if="profileError">{{ profileError.message }}</div>
             <div v-else>
                 <MyProfile
                     :profile="profile"
