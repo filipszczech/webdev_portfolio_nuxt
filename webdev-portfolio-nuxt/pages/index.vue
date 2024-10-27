@@ -1,7 +1,13 @@
 <template>
     <div class="">
         <section id="profile_section" class="mt-8 sm:mt-12 mb-16 lg:mt-24 lg:mb-24">
-            <MyProfile />
+            <div v-if="profilePending">Loading...</div>
+            <div v-else-if="profileError">{{ profileError.message }}</div>
+            <div v-else>
+                <MyProfile
+                    :profile="profile"
+                />
+            </div>
         </section>
         <section id="tech_stack" class="my-16 md:my-24">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.tech_stack') }}</h2>
@@ -89,6 +95,9 @@
     });
     const { data: cv, pending: cvPending, error: cvError } = await useAsyncData('cv_document', () =>
         useSupabaseFetch('cv_documents', { active: true }, true)
+    );
+    const { data: profile, pending: profilePending, error: profileError } = await useAsyncData('profile', () =>
+        useSupabaseFetch('profiles', { active: true }, true)
     );
     useHead({
         title: "Filip Szczęch | portfolio",
