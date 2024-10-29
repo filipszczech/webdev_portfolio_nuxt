@@ -1,5 +1,5 @@
 <template>
-    <div class='relative z-10 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-400 text-gray-800 dark:text-gray-700'>
+    <div class='relative z-10 max-w-7xl mx-auto text-gray-800 dark:text-gray-700'>
         <form 
             @mouseover="isFormHovered = true" 
             @mouseleave="isFormHovered = false" 

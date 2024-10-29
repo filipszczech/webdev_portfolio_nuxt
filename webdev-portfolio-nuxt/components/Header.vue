@@ -14,21 +14,9 @@
                         </NuxtLink>
                         <div class="col-span-3 lg:col-span-1 flex gap-3 items-center justify-center lg:justify-end">
                             <!-- theme swith -->
-                            <button aria-label="change color mode" @click="setColorTheme($colorMode.preference === 'dark' ? 'light': 'dark')" class="transition-all duration-300 hover:scale-110">
-                                <Icon v-if="$colorMode.preference === 'light'" name="noto-v1:last-quarter-moon-face" size="2rem" />
-                                <Icon v-else name="emojione:sun-with-face" size="2rem" />
-                            </button>
+                            <ThemeSwitch />
                             <!-- language switch -->
-                            <NuxtLink
-                                v-for="l in availableLocales"
-                                :key="l.code"
-                                :to="switchLocalePath(l.code)"
-                                class="">
-                                <button aria-label="change language" class="transition-all duration-300 hover:scale-105">
-                                    <Icon v-if="l.code === 'pl'" name="flag:pl-4x3" size="2rem" />
-                                    <Icon v-else-if="l.code === 'en'" name="flag:us-4x3" size="2rem" />
-                                </button>
-                            </NuxtLink>
+                            <LocaleSwitch />
                         </div>
                     </div>
                     <!-- Hamburger menu icon for small screens -->
@@ -114,8 +102,6 @@
 </template>
 
 <script setup>
-    const switchLocalePath = useSwitchLocalePath();
-    const { locale, locales } = useI18n();
     const isHovered = ref(false);
     const isMenuOpen = ref(false);
     const localePath = useLocalePath();
@@ -129,12 +115,6 @@
             section.scrollIntoView({ behavior: 'smooth' });
         }
     };
-    const setColorTheme = (theme) => {
-        useColorMode().preference = theme;
-    };
-    const availableLocales = computed(() => {
-        return locales.value.filter(i => i.code !== locale.value);
-    });
 </script>
 
 <style scoped>

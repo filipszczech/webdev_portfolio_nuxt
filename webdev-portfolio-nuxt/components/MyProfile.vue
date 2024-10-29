@@ -3,7 +3,7 @@
         <div class="col-span-3 lg:col-span-2 flex flex-col gap-6 text-base lg:text-lg xl:pr-16 dark:text-gray-400">
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-400">{{ $t('section_titles.my_profile') }}</h1>
             <div>
-                <h3 class="font-semibold">{{ $t('profile.experience.title') }}</h3>
+                <h2 class="font-semibold">{{ $t('profile.experience.title') }}</h2>
                 <div v-for="(exp, index) in currentExperience" :key="index">
                     <p>{{ exp.position }}</p>
                     <p>{{ exp.company }}</p>
@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="font-semibold">{{ $t('profile.education.title') }}</h3>
+                <h2 class="font-semibold">{{ $t('profile.education.title') }}</h2>
                 <div v-for="(edu, index) in currentEducation" :key="index">
                     <p>{{ edu.level }}</p>
                     <p>{{ edu.field }}</p>
@@ -19,11 +19,11 @@
                 </div>
             </div>
             <div>
-                <h3 class="font-semibold">{{ $t('profile.skills.title') }}</h3>
+                <h2 class="font-semibold">{{ $t('profile.skills.title') }}</h2>
                 <p>{{ currentSkills.join(', ') }}</p>
             </div>
             <div>
-                <h3 class="font-semibold">{{ $t('profile.interests.title') }}</h3>
+                <h2 class="font-semibold">{{ $t('profile.interests.title') }}</h2>
                 <p>{{ currentInterests.join(', ') }}</p>
             </div>
         </div>
@@ -58,7 +58,7 @@
 </script>
 
 <style scoped>
-    h1, h2 {
+    h1 {
         /* font-family: "Russo One", sans-serif; */
         font-family: "Righteous", sans-serif;
     }
