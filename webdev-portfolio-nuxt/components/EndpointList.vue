@@ -21,12 +21,12 @@
         return await useSupabaseFetch('projects');
     });
     
-    const { data: cv, pending: cvPending, error: cvError } = await useAsyncData('cv_document', () =>
-        useSupabaseFetch('cv_documents', { active: true }, true)
-    );
-    const { data: profile, pending: profilePending, error: profileError } = await useAsyncData('profile', () =>
-        useSupabaseFetch('profiles', { active: true }, true)
-    );
+    const { data: cv, pending: cvPending, error: cvError } =  useAsyncData('cv_document', async () => {
+        return await useSupabaseFetch('cv_documents', { active: true }, true)
+    });
+    const { data: profile, pending: profilePending, error: profileError } =  useAsyncData('profile', async () => {
+        return await useSupabaseFetch('profiles', { active: true }, true)
+    });
   </script>
   
 <style scoped>

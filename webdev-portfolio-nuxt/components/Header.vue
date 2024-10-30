@@ -21,7 +21,7 @@
                     </div>
                     <!-- Hamburger menu icon for small screens -->
                     <div class="lg:hidden hover-scale-105 cursor-pointer" @click="toggleMenu">
-                        <Icon name="mdi:hamburger-menu" style="color: black" size="2rem" />
+                        <Icon name="mdi:hamburger-menu" size="2rem" />
                     </div>
                     <div v-if="route.path != localePath('index')" class="navbar-links hidden lg:flex gap-9 xl:gap-12 font-semibold text-gray-700">
                         <NuxtLink :to="localePath('/')" class="transition-all duration-300 hover:scale-110">

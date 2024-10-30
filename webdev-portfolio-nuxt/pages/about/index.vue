@@ -6,19 +6,19 @@
             <div class="mt-6 xl:mt-9">
                 <h2 class="mb-3">{{ $t('about.project_info.tech_stack') }}</h2>
                 <div class="flex gap-4 flex-wrap">
-                    <a href="https://vuejs.org/" target="_blank" class="hover:scale-110 transition-all duration-300">
+                    <a href="https://vuejs.org/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Vue.js.svg"/>
                     </a>
-                    <a href="https://nuxt.com/" target="_blank" class="hover:scale-110 transition-all duration-300">
+                    <a href="https://nuxt.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Nuxt-JS.svg"/>
                     </a>
-                    <a href="https://supabase.com/" target="_blank" class="hover:scale-110 transition-all duration-300">
+                    <a href="https://supabase.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png"/>
                     </a>
-                    <a href="https://tailwindcss.com/" target="_blank" class="hover:scale-110 transition-all duration-300">
+                    <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"/>
                     </a>
-                    <a href="https://vercel.com/" target="_blank" class="hover:scale-110 transition-all duration-300">
+                    <a href="https://vercel.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png"/>
                     </a>
                 </div>
@@ -26,7 +26,7 @@
             <div class="mt-6 xl:mt-9">
                 <h2 class="mb-3">{{ $t('about.project_info.github_project') }}</h2>
                 <div class="w-fit hover:scale-105 transition-all duration-300">
-                    <a href="https://github.com/filipszczech/webdev_portfolio_nuxt" target="_blank" class="">
+                    <a href="https://github.com/filipszczech/webdev_portfolio_nuxt" target="_blank" rel="noopener" class="">
                         <img alt="techstack icon" class="h-12 lg:h-20" src="https://pngimg.com/uploads/github/github_PNG15.png"/>
                     </a>
                 </div>

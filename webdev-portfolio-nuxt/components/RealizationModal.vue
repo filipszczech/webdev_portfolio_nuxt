@@ -21,7 +21,7 @@
                 </div>
                 <div v-if="project.link">
                     <p class="font-semibold">{{ $t('portfolio.modal_link') }}</p>
-                    <a :href="project.link" target="_blank" class="w-fit">
+                    <a :href="project.link" target="_blank" rel="noopener" class="w-fit">
                         <p class="underline w-fit">{{ currentName }}</p>
                     </a>
                 </div>

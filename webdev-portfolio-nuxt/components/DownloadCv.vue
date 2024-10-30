@@ -7,7 +7,7 @@
             <!-- <img :src="img_eng" alt="portfolio en image" class="w-full col-span-6 sm:col-span-3 lg:col-span-2 border-2 border-black p-4 bg-gray-100" /> -->
         </div>
         <div class="w-fit h-fit relative">
-            <a :href="cv.src" target="_blank">
+            <a :href="cv.src" target="_blank" rel="noopener">
                 <div 
                     @mouseover="isLinkHovered = true" 
                     @mouseleave="isLinkHovered = false" 

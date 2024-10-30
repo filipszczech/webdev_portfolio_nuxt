@@ -30,13 +30,13 @@
         <div class="col-span-3 lg:col-span-1 h-fit w-fit bg-gray-100 dark:bg-gray-400 p-4 border-2 border-gray-700">
             <NuxtImg format="avif" placeholder alt="Filip Szczęch profile picture" :src="profile.img" class="transition-all duration-300" />
             <div class="flex gap-4 justify-center mt-4 text-red-500 dark:text-secondary">
-                <a href="https://github.com/filipszczech/" target="_blank" aria-label="Filip Szczęch GitHub Profile" class="transition-all duration-300 hover:scale-110">
+                <a href="https://github.com/filipszczech/" target="_blank" rel="noopener" aria-label="Filip Szczęch GitHub Profile" class="transition-all duration-300 hover:scale-110">
                     <Icon name="mdi:github" size="2.5rem" />
                 </a>
-                <a href="https://www.linkedin.com/in/filip-szcz%C4%99ch-678262234/" target="_blank" aria-label="Filip Szczęch Linkedin Profile" class="transition-all duration-300 hover:scale-110">
+                <a href="https://www.linkedin.com/in/filip-szcz%C4%99ch-678262234/" target="_blank" rel="noopener" aria-label="Filip Szczęch Linkedin Profile" class="transition-all duration-300 hover:scale-110">
                     <Icon name="mdi:linkedin" size="2.5rem" />
                 </a>
-                <a href="https://www.instagram.com/gluciakpl/" target="_blank" aria-label="Filip Szczęch Instagram Profile" class="transition-all duration-300 hover:scale-110">
+                <a href="https://www.instagram.com/gluciakpl/" target="_blank" rel="noopener" aria-label="Filip Szczęch Instagram Profile" class="transition-all duration-300 hover:scale-110">
                     <Icon name="mdi:instagram" size="2.5rem" />
                 </a>
             </div>

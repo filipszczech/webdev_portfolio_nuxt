@@ -27,7 +27,7 @@
             <div class="flex justify-center gap-2 items-center content-center mt-9">
                 <p class="text-lg text-center font-semibold dark:text-gray-400">{{ $t('portfolio.github') }}</p>
                 <span>
-                    <a href="https://github.com/filipszczech/" target="_blank" class="">
+                    <a href="https://github.com/filipszczech/" target="_blank" rel="noopener" class="">
                         <NuxtImg format="avif" placeholder alt="techstack icon" class="h-10" src="https://pngimg.com/uploads/github/github_PNG15.png"/>
                     </a>
                 </span>
@@ -71,6 +71,7 @@
     const isProjectModalOpen = ref(false);
     const isCvModalOpen = ref(false);
     const selectedProject = ref(null);
+    const { locale } = useI18n();
     const { toasts } = useToast();
 
     function openCvModal() {
@@ -92,19 +93,19 @@
     const { data: projects, pending: projectsPending, error: projectsError } = useAsyncData('projects', async () => {
         return await useSupabaseFetch('projects');
     });
-    const { data: cv, pending: cvPending, error: cvError } = await useAsyncData('cv_document', () =>
-        useSupabaseFetch('cv_documents', { active: true }, true)
-    );
-    const { data: profile, pending: profilePending, error: profileError } = await useAsyncData('profile', () =>
-        useSupabaseFetch('profiles', { active: true }, true)
-    );
+    const { data: cv, pending: cvPending, error: cvError } = useAsyncData('cv_document', async () => {
+        return await useSupabaseFetch('cv_documents', { active: true }, true)
+    });
+    const { data: profile, pending: profilePending, error: profileError } = useAsyncData('profile', async () => {
+        return await useSupabaseFetch('profiles', { active: true }, true)
+    });
     useHead({
         title: "Filip Szczęch | portfolio",
         meta: [
             { name: 'description', content: 'Web developer portfolio created in nuxt, including cv, skills and projects. (homepage)' }
         ],
         htmlAttrs: {
-            lang: 'pl'
+            lang: locale.value
         },
     });
 </script>
