@@ -21,6 +21,7 @@
     "@vee-validate/yup": "^4.14.3",
     "nuxt": "^3.13.0",
     "nuxt-mail": "^5.1.1",
+    "nuxt-schema-org": "^3.4.1",
     "pinia": "^2.2.4",
     "vee-validate": "^4.14.3",
     "vue": "latest",
