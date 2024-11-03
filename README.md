@@ -1,16 +1,28 @@
-# Template for Nuxt + Supabase projects
+# My web developer portfolio
 
-Template ready to build end deploy full-stack applications based on Nuxt and Supabase.
-<br> 
-Project includes set of important packages, ready to customize layouts, basic pages animation, error page and basic seo setup.
+Web app coded with Nuxt, Supabase and Tailwind to show my skills and experience as a full-stack developer.
 
-### Included and ready to use modules:
-- '@nuxtjs/supabase', 
-- '@nuxtjs/tailwindcss', 
-- '@nuxt/image', 
-- 'nuxt-mail', 
-- '@pinia/nuxt', 
-- '@nuxt/icon'.
+### Includes:
+- spa with ssr,
+- multiple languages,
+- content easly editable on Supbase Dashboard,
+- dark mode,
+- great performance and SEO,
+- scalable and interesting design,
+- clean code.
+
+### Used Packages:
+- @nuxtjs/supabase - backend implementation with BaaS from Supabase,
+- @nuxtjs/tailwindcss - styles,
+- @nuxt/image - image file optimization,
+- @vee-validate - form validation,
+- @nuxt-mail - email sending,
+- @nuxt/icon - a base of free customizable icons,
+- @nuxtjs/i18n - multilingual support,
+- @nuxtjs/color-mode - dark mode implementation,
+- @nuxtjs/robots - robots.txt handling,
+- @nuxtjs/sitemap - for sitemap,
+- @nuxt/fonts - a base and easy retrieval of fonts.
 
 ## Setup
 
