@@ -1,5 +1,7 @@
 <template>
-    <div class="flex flex-col gap-6 xl:gap-9 text-lg dark:text-gray-400">
+    <div ref="motionTarget">
+        <h2 class="section-title">{{ $t('section_titles.tech_stack') }}</h2>
+        <div class="flex flex-col gap-6 xl:gap-9 text-lg dark:text-gray-400">
         <div>
             <p class="mb-3 font-semibold">{{ $t('tech_stack.languages') }}</p>
             <div class="flex gap-5 lg:gap-6 flex-wrap">
@@ -40,8 +42,15 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script setup>
-
+    const { target: motionTarget } = useMotionVisibleOnce();
 </script>
+
+<style scoped>
+    h2 {
+        font-family: "Righteous", sans-serif;
+    }
+</style>

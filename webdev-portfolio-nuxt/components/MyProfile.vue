@@ -1,5 +1,5 @@
 <template>
-        <div class="grid grid-cols-3 gap-9 xl:gap-16">
+    <div class="grid grid-cols-3 gap-9 xl:gap-16" ref="motionTarget">
         <div class="col-span-3 lg:col-span-2 flex flex-col gap-6 text-base lg:text-lg xl:pr-16 dark:text-gray-400">
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-400">{{ $t('section_titles.my_profile') }}</h1>
             <div>
@@ -41,7 +41,7 @@
                 </a>
             </div>
         </div>
-        </div>
+    </div>
   </template>
   
 
@@ -55,6 +55,8 @@
     const currentEducation = computed(() => (locale.value === 'pl' ? props.profile.education : props?.profile.education_en));
     const currentSkills = computed(() => (locale.value === 'pl' ? props.profile.skills : props?.profile.skills_en));
     const currentInterests = computed(() => (locale.value === 'pl' ? props.profile.interests : props?.profile.interests_en));
+
+    const { target: motionTarget } = useMotionVisibleOnce();
 </script>
 
 <style scoped>

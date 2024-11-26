@@ -80,7 +80,8 @@
                 "nuxtjs/color-mode - implementacja trybu ciemnego,",
                 "nuxtjs/robots - obsługa pliku robots.txt,",
                 "nuxtjs/sitemap - generowanie sitemapy,",
-                "nuxt/fonts - baza i łatwe pozyskiwanie fontów."
+                "nuxt/fonts - baza i łatwe pozyskiwanie fontów.",
+                "vueuse/motion - animacje."
             ]
         }
     }

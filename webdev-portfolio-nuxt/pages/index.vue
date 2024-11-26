@@ -9,22 +9,35 @@
             </div>
         </section>
         <section id="tech_stack" class="my-16 md:my-24">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.tech_stack') }}</h2>
             <TechStack />
         </section>
         <section id="portfolio_section" class="mb-16">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.portfolio') }}</h2>
+            <div
+                v-motion
+                :initial="{ opacity: 0, x: -100 }"
+                :visibleOnce="{ opacity: 1, x: 0 }"
+                :duration="600">
+                <h2 class="section-title">{{ $t('section_titles.portfolio') }}</h2>
+            </div>
             <div v-if="projectsPending">Loading...</div>
             <div v-else-if="projectsError">{{ projectsError.message }}</div>
             <div v-else class="grid grid-cols-6 gap-9 xl:gap-16 grid-auto-rows-[minmax(0,_1fr)]">
-                <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="w-full col-span-6 sm:col-span-3 lg:col-span-2">
+                <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="w-full col-span-6 sm:col-span-3 lg:col-span-2" 
+                    v-motion
+                    :initial="{ opacity: 0, x: -100 }"
+                    :visibleOnce="{ opacity: 1, x: 0 }"
+                    :duration="600" :delay="200*projectIndex">
                     <RealiztaionCard
                         @click="openProjectModal(project)"
                         :project="project"
                     />
                 </div>
             </div>
-            <div class="flex justify-center gap-2 items-center content-center mt-9">
+            <div class="flex justify-center gap-2 items-center content-center mt-9"
+                v-motion
+                :initial="{ opacity: 0, x: -100 }"
+                :visibleOnce="{ opacity: 1, x: 0 }"
+                :duration="600">
                 <p class="text-lg text-center font-semibold dark:text-gray-400">{{ $t('portfolio.github') }}</p>
                 <span>
                     <a href="https://github.com/filipszczech/" target="_blank" rel="noopener" class="">
@@ -33,8 +46,8 @@
                 </span>
             </div>
         </section>
-        <section id="cv_section" class="my-16 md:my-24">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.cv') }}</h2>
+        <section id="cv_section" class="my-16 md:my-24" v-motion :initial="{ opacity: 0, x: -100,}" :visibleOnce="{ opacity: 1,x: 0, transition: {duration: 600}}">
+            <h2 class="section-title">{{ $t('section_titles.cv') }}</h2>
             <div v-if="cvPending">Loading...</div>
             <div v-else-if="cvError">{{ cvError.message }}</div>
             <div v-else>
@@ -45,7 +58,6 @@
             </div>
         </section>
         <section id="contact_section" class="mt-16 md:mt-24 mb-24 lg:mb-32">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 xl:mb-9 text-gray-700 dark:text-gray-400">{{ $t('section_titles.contact') }}</h2>
             <ContactForm />
         </section>
         <!-- toast -->
