@@ -80,7 +80,8 @@
                 "nuxtjs/color-mode - dark mode implementation,",
                 "nuxtjs/robots - robots.txt handling,",
                 "nuxtjs/sitemap - for sitemap,",
-                "nuxt/fonts - a base and easy retrieval of fonts."
+                "nuxt/fonts - a base and easy retrieval of fonts.",
+                "vueuse/motion - animations."
             ]
         }
     }

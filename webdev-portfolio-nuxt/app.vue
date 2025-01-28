@@ -37,7 +37,7 @@
     });
 </script>
 
-<style>
+<!-- <style>
   .page-enter-active,
   .page-leave-active {
       transition: all 0.5s;
@@ -47,4 +47,4 @@
       opacity: 0;
       transform: translateX(100px);
   }
-</style>
+</style> -->

@@ -1,5 +1,7 @@
 <template>
-    <div class='relative z-10 max-w-7xl mx-auto text-gray-800 dark:text-gray-700'>
+    <div ref="motionTarget">
+        <h2 class="section-title">{{ $t('section_titles.contact') }}</h2>
+        <div class='relative z-10 max-w-7xl mx-auto text-gray-800 dark:text-gray-700'>
         <form 
             @mouseover="isFormHovered = true" 
             @mouseleave="isFormHovered = false" 
@@ -32,6 +34,8 @@
             class="absolute w-full h-full top-3 left-3 bg-gray-700 z-0 transition-transform duration-300 ease-in-out">
         </div>
         </div>
+    </div>
+    
 </template>
 
 <script setup>
@@ -40,6 +44,7 @@
     const mail = useMail();
     const { addToast } = useToast();
     const isFormHovered = ref(false);
+    const { target: motionTarget } = useMotionVisibleOnce();
 
     const { errors, handleSubmit, resetForm, defineField, setFieldValue } = useForm({
         initialValues: {
@@ -80,3 +85,10 @@
     const [company, companyAttrs] = defineField('company');
     const [message, messageAttrs] = defineField('message');
 </script>
+
+<style scoped>
+    h2 {
+        /* font-family: "Russo One", sans-serif; */
+        font-family: "Righteous", sans-serif;
+    }
+</style>
