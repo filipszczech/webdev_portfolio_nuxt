@@ -3,13 +3,14 @@ export function useMotionVisibleOnce() {
   const motion = useMotion(target, {
     initial: {
       opacity: 0,
-      x: -100,
+      y: 50,
     },
     visibleOnce: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 600,
+        delay: 100,
       },
     },
   });

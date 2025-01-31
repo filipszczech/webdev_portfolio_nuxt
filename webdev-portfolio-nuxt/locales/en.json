@@ -5,13 +5,16 @@
         "portfolio_link": "PORTFOLIO",
         "contact_link": "CONTACT",
         "about_page": "ABOUT PAGE",
-        "back_to_homepage": "GO BACK TO THE PAGE"
+        "back_to_homepage": "GO BACK TO THE PAGE",
+        "offer_page": "OFFER"
     },
     "section_titles": {
         "my_profile": "MY PROFILE",
         "tech_stack": "TECH STACK",
         "portfolio": "PORTFOLIO",
         "contact": "CONTACT",
+        "offer": "OFFER",
+        "realizations": "REALIZATIONS",
         "cv": "DOWNLOAD CV"
     },
     "profile": {
@@ -83,6 +86,45 @@
                 "nuxt/fonts - a base and easy retrieval of fonts.",
                 "vueuse/motion - animations."
             ]
+        }
+    },
+    "offer": {
+        "description_1": "I am a developer with experience, familiar with modern technological trends. I create modern websites based on the latest tools.",
+        "description_2": "Let's work together!",
+        "offer_for": "My offer is aimed at people who:",
+        "offer_for_list": [
+            "🌱 Create something valuable and want to stand out online",
+            "🐾 Plan to refresh their visual identity",
+            "🌐 Are dissatisfied with their current website",
+            "😡 Want to avoid high maintenance costs and annoying subscriptions"
+        ],
+        "offer_pros": "What I guarantee:",
+        "offer_pros_list": [
+            "⚡ Modern technologies and fast performance (no WordPress or similar tools)",
+            "🎨 A custom graphic design tailored to your needs",
+            "📞 Full responsiveness – works correctly on every device",
+            "📈 SEO optimization and high search engine ranking",
+            "🍬 Additional features such as dark mode, multilingual support, animations, blog, etc.",
+            "🎣 Full control over content and data – or the option to delegate management to me",
+            "💰 No unnecessary recurring costs (only domain fees)",
+            "💬 Ongoing support and the possibility of future updates"
+        ],
+        "form": {
+            "p1": "Interested in working together?",
+            "p2": "If so, that's great! Send me a message, and I'll get back to you. 😊",
+            "form_name": "Name *",
+            "form_website_portfolio": "Portfolio",
+            "form_website_one_page": "Business card - one page",
+            "form_website_page": "Company website",
+            "form_website_other": "Other project",
+            "form_bonus_list_p": "Which additional features interest you?",
+            "form_bonus_list_dark_mode": "Dark mode",
+            "form_bonus_list_blog": "Blog",
+            "form_bonus_list_locales": "Multilingual support",
+            "form_bonus_list_forms": "Advanced contact forms",
+            "form_bonus_list_products": "Product catalog",
+            "form_message": "Additional information",
+            "form_send": "Send"
         }
     }
 }

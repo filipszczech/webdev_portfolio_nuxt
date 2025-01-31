@@ -22,7 +22,7 @@
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/png-shadow-512/Django.png"/>
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"/>
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Node.js.svg"/>
-                <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/png-shadow-512/Express.png"/>
+                <!-- <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/png-shadow-512/Express.png"/> -->
             </div>
         </div>
         <div>
@@ -39,6 +39,8 @@
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/png-shadow-512/Linux.png"/>
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"/>
                 <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Docker.svg"/>
+                <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://img.icons8.com/?size=100&id=62452&format=png&color=000000"/>
+
             </div>
         </div>
     </div>

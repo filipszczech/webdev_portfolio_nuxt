@@ -5,13 +5,16 @@
         "portfolio_link": "PORTFOLIO",
         "contact_link": "KONTAKT",
         "about_page": "O STRONIE",
-        "back_to_homepage": "POWRÓT DO STRONY"
+        "back_to_homepage": "POWRÓT DO STRONY",
+        "offer_page": "OFERTA"
     },
     "section_titles": {
         "my_profile": "MÓJ PROFIL",
         "tech_stack": "STACK TECHNOLOGICZNY",
         "portfolio": "PORTFOLIO",
         "contact": "KONTAKT",
+        "offer": "OFERTA",
+        "realizations": "REALIZACJE",
         "cv": "POBIERZ CV"
     },
     "profile": {
@@ -83,6 +86,45 @@
                 "nuxt/fonts - baza i łatwe pozyskiwanie fontów.",
                 "vueuse/motion - animacje."
             ]
+        }
+    },
+    "offer": {
+        "description_1": "Jestem programistą z doświadczeniem, znającym współczesne trendy technologiczne. Zajmuję się tworzeniem nowoczesnych stron internetowych, opartych o najnowsze narzędzia.",
+        "description_2": "Zapraszam do współpracy!",
+        "offer_for": "Moją ofertę kieruję do osób, które:",
+        "offer_for_list": [
+            "🌱 Tworzą coś wartościowego i chcą się wyróżnić w sieci",
+            "🐾 Planują odświeżenie swojej identyfikacji wizualnej",
+            "🌐 Są niezadowolone ze swojej obecnej strony internetowej",
+            "😡 Chcą uniknąć wysokich kosztów utrzymania i uciążliwych subskrypcji"
+        ],
+        "offer_pros": "Co gwarantuję:",
+        "offer_pros_list": [
+            "⚡ Nowoczesne technologie i szybkie działanie (bez WordPressa i podobnych narzędzi)",
+            "🎨 Indywidualny projekt graficzny dopasowany do Twoich potrzeb",
+            "📞 Pełną responsywność - poprawne działanie na każdym urządzeniu",
+            "📈 Optymalizację pod SEO i wysokie pozycjonowanie",
+            "🍬 Możliwość dodania funkcji, takich jak dark mode, wielojęzykowość, animacje, blog itd.",
+            "🎣 Pełną kontrolę nad treścią i danymi - lub możliwość przekierowania zarządzania na mnie",
+            "💰 Brak zbędnych kosztów cyklicznych (jedynie opłata za domenę)",
+            "💬 Stały kontakt i możliwość wprowadzania zmian w przyszłości"
+        ],
+        "form": {
+            "p1": "Zachęciłem Cię do współpracy?",
+            "p2": "Jeśli tak to super! Napisz do mnie, a ja się odezwę. 😊",
+            "form_name": "Imię *",
+            "form_website_portfolio": "Portfolio",
+            "form_website_one_page": "Wizytówka - one page",
+            "form_website_page": "Strona firmy",
+            "form_website_other": "Inny projekt",
+            "form_bonus_list_p": "Jakie bonusowe funkcjonalności Cię interesują?",
+            "form_bonus_list_dark_mode": "Dark mode",
+            "form_bonus_list_blog": "Blog",
+            "form_bonus_list_locales": "Wielojęzykowość",
+            "form_bonus_list_forms": "Rozbudowane formularze kontaktowe",
+            "form_bonus_list_products": "Katalog produktów",
+            "form_message": "Informacje dodatkowe",
+            "form_send": "Wyślij"
         }
     }
 }

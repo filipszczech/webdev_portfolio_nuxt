@@ -13,7 +13,7 @@
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Nuxt-JS.svg"/>
                     </a>
                     <a href="https://supabase.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
-                        <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png"/>
+                        <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg"/>
                     </a>
                     <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"/>

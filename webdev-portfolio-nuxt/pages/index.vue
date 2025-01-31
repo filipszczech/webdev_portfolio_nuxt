@@ -14,8 +14,8 @@
         <section id="portfolio_section" class="mb-16">
             <div
                 v-motion
-                :initial="{ opacity: 0, x: -100 }"
-                :visibleOnce="{ opacity: 1, x: 0 }"
+                :initial="{ opacity: 0, y: 50 }"
+                :visibleOnce="{ opacity: 1, y: 0 }"
                 :duration="600">
                 <h2 class="section-title">{{ $t('section_titles.portfolio') }}</h2>
             </div>
@@ -24,8 +24,8 @@
             <div v-else class="grid grid-cols-6 gap-9 xl:gap-16 grid-auto-rows-[minmax(0,_1fr)]">
                 <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="w-full col-span-6 sm:col-span-3 lg:col-span-2" 
                     v-motion
-                    :initial="{ opacity: 0, x: -100 }"
-                    :visibleOnce="{ opacity: 1, x: 0 }"
+                    :initial="{ opacity: 0, y: 50 }"
+                    :visibleOnce="{ opacity: 1, y: 0 }"
                     :duration="600" :delay="200*projectIndex">
                     <RealiztaionCard
                         @click="openProjectModal(project)"
@@ -35,8 +35,8 @@
             </div>
             <div class="flex justify-center gap-2 items-center content-center mt-9"
                 v-motion
-                :initial="{ opacity: 0, x: -100 }"
-                :visibleOnce="{ opacity: 1, x: 0 }"
+                :initial="{ opacity: 0, y: 50 }"
+                :visibleOnce="{ opacity: 1, y: 0 }"
                 :duration="600">
                 <p class="text-lg text-center font-semibold dark:text-gray-400">{{ $t('portfolio.github') }}</p>
                 <span>
@@ -46,7 +46,7 @@
                 </span>
             </div>
         </section>
-        <section id="cv_section" class="my-16 md:my-24" v-motion :initial="{ opacity: 0, x: -100,}" :visibleOnce="{ opacity: 1,x: 0, transition: {duration: 600}}">
+        <section id="cv_section" class="my-16 md:my-24" v-motion :initial="{ opacity: 0, y: 50,}" :visibleOnce="{ opacity: 1, y: 0, transition: {duration: 600, delay: 100}}">
             <h2 class="section-title">{{ $t('section_titles.cv') }}</h2>
             <div v-if="cvPending">Loading...</div>
             <div v-else-if="cvError">{{ cvError.message }}</div>
