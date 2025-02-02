@@ -80,6 +80,9 @@ export default defineNuxtConfig({
     injectPosition: 0,
     viewer: true,
   },
+  image: {
+    format: ['webp', 'jpg']
+  },
   site: {
     url: 'https://filipszczech-dev.pl',
     name: 'Filip Szczęch - webdev portfolio'

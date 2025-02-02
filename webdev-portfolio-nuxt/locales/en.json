@@ -91,24 +91,39 @@
     "offer": {
         "description_1": "I am a developer with experience, familiar with modern technological trends. I create modern websites based on the latest tools.",
         "description_2": "Let's work together!",
-        "offer_for": "My offer is aimed at people who:",
-        "offer_for_list": [
-            "🌱 Create something valuable and want to stand out online",
-            "🐾 Plan to refresh their visual identity",
-            "🌐 Are dissatisfied with their current website",
-            "😡 Want to avoid high maintenance costs and annoying subscriptions"
-        ],
+        "offer_for": "My offer is aimed at people who are:",
+        "offer_for_list": {
+            "item1_start": "🌱 building something great and want to",
+            "item1_highlight": "showcase it",
+            "item2_start": "🐾 planning to",
+            "item2_highlight": "refresh",
+            "item2_end": "their online identity",
+            "item3_start": "🌐 unhappy with their",
+            "item3_highlight": "current",
+            "item3_end": "website",
+            "item4_start": "😡 struggling with business costs and",
+            "item4_highlight": "annoying subscriptions"
+        },
         "offer_pros": "What I guarantee:",
-        "offer_pros_list": [
-            "⚡ Modern technologies and fast performance (no WordPress or similar tools)",
-            "🎨 A custom graphic design tailored to your needs",
-            "📞 Full responsiveness – works correctly on every device",
-            "📈 SEO optimization and high search engine ranking",
-            "🍬 Additional features such as dark mode, multilingual support, animations, blog, etc.",
-            "🎣 Full control over content and data – or the option to delegate management to me",
-            "💰 No unnecessary recurring costs (only domain fees)",
-            "💬 Ongoing support and the possibility of future updates"
-        ],
+        "offer_pros_list": {
+            "item1_highlight": "⚡ The latest technologies",
+            "item1_end": "and fast performance (without WordPress and similar tools)",
+            "item2_highlight": "🎨 Custom",
+            "item2_end": " graphic design",
+            "item3_start": "📞 Scalability and ",
+            "item3_highlight": "mobile version",
+            "item4_start": "📈 High ranking and focus on ",
+            "item4_highlight": "SEO",
+            "item5_start": "🍬 A range of available ",
+            "item5_highlight": "add-ons:",
+            "item5_end": "dark mode, multilingual support, animations, blog, etc.",
+            "item6_highlight": "🎣 Full control over content",
+            "item6_end": " and data with the option to delegate this to me",
+            "item7_highlight": "💰 No recurring costs",
+            "item7_end": " (only domain costs)",
+            "item8_highlight": "💬 Ongoing support",
+            "item8_end": " and the ability to modify the project in the future"  
+        },
         "form": {
             "p1": "Interested in working together?",
             "p2": "If so, that's great! Send me a message, and I'll get back to you. 😊",

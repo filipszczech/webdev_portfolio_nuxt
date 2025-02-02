@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="col-span-3 lg:col-span-1 h-fit w-fit bg-gray-100 dark:bg-gray-400 p-4 border-2 border-gray-700">
-            <NuxtImg format="avif" placeholder alt="Filip Szczęch profile picture" :src="profile.img" class="transition-all duration-300" />
+            <NuxtImg format="webp" placeholder alt="Filip Szczęch profile picture" :src="profile.img" class="transition-all duration-300" />
             <div class="flex gap-4 justify-center mt-4 text-red-500 dark:text-secondary">
                 <a href="https://github.com/filipszczech/" target="_blank" rel="noopener" aria-label="Filip Szczęch GitHub Profile" class="transition-all duration-300 hover:scale-110">
                     <Icon name="mdi:github" size="2.5rem" />
