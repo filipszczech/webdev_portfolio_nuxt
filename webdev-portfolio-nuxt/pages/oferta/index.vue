@@ -1,10 +1,21 @@
 <template>
     <div>
         <section class="md:text-lg mb-16 md:mb-24 text-gray-700 dark:text-gray-400">
-            <h1 class="section-title uppercase">{{ $t('section_titles.offer') }}</h1>
-            <p class="xl:max-w-[75%]">{{ $t('offer.description_1') }}</p>
-            <p class="font-semibold mt-6 mb-2">{{ $t('offer.offer_for') }}</p>
-            <ul class="flex flex-col gap-1">
+            <div
+                v-motion
+                :initial="{ opacity: 0, y: 50 }"
+                :visibleOnce="{ opacity: 1, y: 0 }"
+                :duration="600">
+                <h1 class="section-title uppercase">{{ $t('section_titles.offer') }}</h1>
+                <p class="xl:max-w-[75%]">{{ $t('offer.description_1') }}</p>
+            </div>
+            <ul class="flex flex-col gap-1 mt-6"
+                v-motion
+                :initial="{ opacity: 0, y: 50 }"
+                :visibleOnce="{ opacity: 1, y: 0 }"
+                :duration="600"
+                :delay="200">
+                <p class="font-semibold mb-1">{{ $t('offer.offer_for') }}</p>
                 <li>
                     {{ $t('offer.offer_for_list.item1_start') }} 
                     <span class="text-red-500">{{ $t('offer.offer_for_list.item1_highlight') }}</span>
@@ -24,8 +35,13 @@
                     <span class="text-red-500">{{ $t('offer.offer_for_list.item4_highlight') }}</span>
                 </li>
             </ul>
-            <p class="font-semibold mt-6 mb-2">{{ $t('offer.offer_pros') }}</p>
-            <ul class="flex flex-col gap-1">
+            <ul class="flex flex-col gap-1 mt-6"
+                v-motion
+                :initial="{ opacity: 0, y: 50 }"
+                :visibleOnce="{ opacity: 1, y: 0 }"
+                :duration="600"
+                :delay="400">
+                <p class="font-semibold mt-6 mb-1">{{ $t('offer.offer_pros') }}</p>
                 <li>
                     <span class="text-secondary">{{ $t('offer.offer_pros_list.item1_highlight') }}</span>
                     {{ $t('offer.offer_pros_list.item1_end') }}
@@ -60,9 +76,18 @@
                     {{ $t('offer.offer_pros_list.item8_end') }}
                 </li>
             </ul>
-            <h2 class="section-title uppercase mt-12">{{ $t('section_titles.realizations') }}</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-9">
-                <div v-for="realization in realizations" :key="realization.id" class="">
+            <div class="mt-12"
+                v-motion
+                :initial="{ opacity: 0, y: 50 }"
+                :visibleOnce="{ opacity: 1, y: 0 }"
+                :duration="600">
+                <h2 class="section-title uppercase">{{ $t('section_titles.realizations') }}</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-9">
+                <div v-for="(realization, realizationIndex) in realizations" :key="realization.id" class=""
+                    v-motion
+                    :initial="{ opacity: 0, y: 50 }"
+                    :visibleOnce="{ opacity: 1, y: 0 }"
+                    :duration="600" :delay="200*realizationIndex">
                     <div class="border border-gray-700 overflow-hidden">
                         <a :href="realization.link" target="_blank" rel="noopener" :aria-label="'realization page: ' + realization.name">
                             <NuxtImg :src="realization.img" format="avif" placeholder :alt="'realization: ' + realization.name" class="w-full h-96 object-cover cursor-pointer hover:scale-[1.02] transition-all duration-300" />
@@ -72,6 +97,7 @@
                         <p class="mt-3 font-semibold text-center">{{ realization.name }}</p>
                     </a>
                 </div>
+            </div>
             </div>
         </section>
         <section id="contact_section" class="mt-16 md:mt-24 mb-24 lg:mb-32">

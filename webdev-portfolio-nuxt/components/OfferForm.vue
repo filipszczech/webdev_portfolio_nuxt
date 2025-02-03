@@ -13,15 +13,15 @@
             </div>
             <div class="col-span-2 md:col-span-1 relative bg-transparent border border-gray-700">
                 <input type="text" :placeholder="$t('contact.form_name')" v-model="name" v-bind="nameAttrs" class="w-full bg-transparent p-3 dark:placeholder-gray-700" />
-                <p class="absolute -bottom-6 lg:-bottom-7 left-0">{{ errors.name }}</p>
+                <p class="absolute -bottom-6 lg:-bottom-7 left-0 text-red-500">{{ errors.name }}</p>
             </div>
             <div class="col-span-2 md:col-span-1 relative bg-transparent border border-gray-700">
                 <input type="email" placeholder="Email *" v-model="email" v-bind="emailAttrs" class="w-full bg-transparent p-3 dark:placeholder-gray-700" />
-                <p class="absolute -bottom-6 lg:-bottom-7 left-0">{{ errors.email }}</p>
+                <p class="absolute -bottom-6 lg:-bottom-7 left-0 text-red-500">{{ errors.email }}</p>
             </div>
             <div class="col-span-2 md:col-span-1 relative bg-transparent border border-gray-700">
                 <input type="text" :placeholder="$t('contact.form_company')" v-model="company" v-bind="companyAttrs" class="w-full bg-transparent p-3 dark:placeholder-gray-700" />
-                <p class="absolute -bottom-6 lg:-bottom-7 left-0">{{ errors.company }}</p>
+                <p class="absolute -bottom-6 lg:-bottom-7 left-0 text-red-500">{{ errors.company }}</p>
             </div>
             <div class="col-span-2 md:col-span-1 relative bg-transparent border border-gray-700">
                 <select v-model="websiteType" v-bind="websiteTypeAttrs" class="w-full h-full bg-transparent p-3">
@@ -58,7 +58,7 @@
             </div>
             <div class="relative col-span-2 bg-transparent">
                 <textarea :placeholder="$t('offer.form.form_message')" v-model="message" v-bind="messageAttrs" class="w-full bg-transparent min-h-24 p-3 border border-gray-700 dark:placeholder-gray-700"></textarea>
-                <p class="absolute -bottom-4 lg:-bottom-5 left-0">{{ errors.message }}</p>
+                <p class="absolute -bottom-4 lg:-bottom-5 left-0 text-red-500">{{ errors.message }}</p>
             </div>
             <AnimatedButton :text="$t('contact.form_send')" />
         </form>
