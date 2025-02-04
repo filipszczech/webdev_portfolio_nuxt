@@ -19,9 +19,9 @@
                 :duration="600">
                 <h2 class="section-title">{{ $t('section_titles.portfolio') }}</h2>
             </div>
-            <div v-if="projectsPending">Loading...</div>
-            <div v-else-if="projectsError">{{ projectsError.message }}</div>
-            <div v-else class="grid grid-cols-6 gap-9 xl:gap-16 grid-auto-rows-[minmax(0,_1fr)]">
+            <!-- <div v-if="projectsPending">Loading...</div>
+            <div v-else-if="projectsError">{{ projectsError.message }}</div> -->
+            <div class="grid grid-cols-6 gap-9 xl:gap-16 grid-auto-rows-[minmax(0,_1fr)]">
                 <div v-for="(project, projectIndex) in projects" :key="projectIndex" class="w-full col-span-6 sm:col-span-3 lg:col-span-2" 
                     v-motion
                     :initial="{ opacity: 0, y: 50 }"
@@ -102,9 +102,7 @@
         isProjectModalOpen.value = false;
     }
 
-    const { data: projects, pending: projectsPending, error: projectsError } = useAsyncData('projects', async () => {
-        return await useSupabaseFetch('projects');
-    });
+    const { data: projects } = await useFetch('/api/projects');
     const { data: cv, pending: cvPending, error: cvError } = useAsyncData('cv_document', async () => {
         return await useSupabaseFetch('cv_documents', { active: true }, true)
     });
