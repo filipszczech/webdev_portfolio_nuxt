@@ -5,6 +5,7 @@
                 v-motion
                 :initial="{ opacity: 0, y: 50 }"
                 :visibleOnce="{ opacity: 1, y: 0 }"
+                :leave="{ opacity: 0, y: 50 }"
                 :duration="600">
                 <h1 class="section-title uppercase">{{ $t('section_titles.offer') }}</h1>
                 <p class="xl:max-w-[75%]">{{ $t('offer.description_1') }}</p>
