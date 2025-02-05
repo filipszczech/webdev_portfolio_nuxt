@@ -2,6 +2,10 @@
     <div class="flex flex-col gap-6">
         <h2>{{ $t('about.project_info.endpoint_list') }}</h2>
         <EndpointListElement
+            :exampleData="realizations[0]"
+            endpointType="GET"
+            endpointPath="/realizations" />
+        <EndpointListElement
             :exampleData="projects[0]"
             endpointType="GET"
             endpointPath="/projects" />
@@ -17,16 +21,10 @@
   </template>
   
   <script setup>
-    const { data: projects, pending: projectsPending, error: projectsError } = useAsyncData('projects', async () => {
-        return await useSupabaseFetch('projects');
-    });
-    
-    const { data: cv, pending: cvPending, error: cvError } =  useAsyncData('cv_document', async () => {
-        return await useSupabaseFetch('cv_documents', { active: true }, true)
-    });
-    const { data: profile, pending: profilePending, error: profileError } =  useAsyncData('profile', async () => {
-        return await useSupabaseFetch('profiles', { active: true }, true)
-    });
+    const { data: projects, error: projectsError } = await useFetch('/api/projects');
+    const { data: realizations, error: realizationsError } = await useFetch('/api/realizations');
+    const { data: cv, error: cvError } = await useFetch('/api/cv-document');
+    const { data: profile, error: profileError } = await useFetch('/api/profile');
   </script>
   
 <style scoped>

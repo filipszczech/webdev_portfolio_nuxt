@@ -122,9 +122,7 @@
             lang: 'pl'
         },
     });
-    const { data: realizations, pending: realizationsPending, error: realizationsError } = useAsyncData('realizations', async () => {
-        return await useSupabaseFetch('realizations');
-    }); 
+    const { data: realizations, error: realizationsError } = await useFetch('/api/realizations');
 </script>
 
 <style scoped>

@@ -48,9 +48,7 @@
         </section>
         <section id="cv_section" class="my-16 md:my-24" v-motion :initial="{ opacity: 0, y: 50,}" :visibleOnce="{ opacity: 1, y: 0, transition: {duration: 600, delay: 100}}">
             <h2 class="section-title">{{ $t('section_titles.cv') }}</h2>
-            <div v-if="cvPending">Loading...</div>
-            <div v-else-if="cvError">{{ cvError.message }}</div>
-            <div v-else>
+            <div>
                 <DownloadCv
                     @click="openCvModal"
                     :cv="cv"
@@ -102,13 +100,10 @@
         isProjectModalOpen.value = false;
     }
 
-    const { data: projects } = await useFetch('/api/projects');
-    const { data: cv, pending: cvPending, error: cvError } = useAsyncData('cv_document', async () => {
-        return await useSupabaseFetch('cv_documents', { active: true }, true)
-    });
-    const { data: profile, pending: profilePending, error: profileError } = useAsyncData('profile', async () => {
-        return await useSupabaseFetch('profiles', { active: true }, true)
-    });
+    const { data: projects, error: projectsError } = await useFetch('/api/projects');
+    const { data: cv, error: cvError } = await useFetch('/api/cv-document');
+    const { data: profile, error: profileError } = await useFetch('/api/profile');
+    
     useHead({
         title: "Filip Szczęch | portfolio",
         meta: [
