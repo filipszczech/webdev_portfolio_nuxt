@@ -4,12 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: process.env.ENABLE_DEVTOOLS === 'true' },
   routeRules: {
     '/': { prerender: true },
-    '/**': { 
-      isr: 60 * 60 * 6,
-      cache: {
-        maxAge: 60 * 60 * 24,
-      },
-    },
   },
   app: {
     // pageTransition: { name: 'page', mode: 'out-in' },
