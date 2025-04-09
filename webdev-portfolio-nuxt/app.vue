@@ -38,8 +38,9 @@
         {
         children: `
             window.SnipcartSettings = {
-            publicApiKey: 'MGQ3MDg0YzctYjAxNS00ZWI1LTgyMzAtOWM1M2FhOGY0ODBiNjM4Nzg3NjIyNDY5NDM0MTEz',
+            publicApiKey: 'NmZkNDI0MmMtNzJkNS00YjY3LWE3ZGMtMjNkMjYzZjM3NjIyNjM4Nzg3NjIyNDY5NDM0MTEz',
             loadStrategy: 'on-user-interaction',
+    currency: 'pln',
             modalStyle: "side",
             };
 
