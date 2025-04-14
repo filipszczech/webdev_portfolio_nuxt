@@ -12,14 +12,14 @@
                     <a href="https://nuxt.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Nuxt-JS.svg"/>
                     </a>
-                    <a href="https://supabase.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
-                        <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg"/>
-                    </a>
                     <a href="https://tailwindcss.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
                         <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"/>
                     </a>
-                    <a href="https://vercel.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
-                        <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png"/>
+                    <a href="https://supabase.com/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
+                        <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg"/>
+                    </a>
+                    <a href="https://www.coolify.io/" target="_blank" rel="noopener" class="hover:scale-110 transition-all duration-300">
+                        <img alt="techstack icon" class="w-9 h-9 lg:w-16 lg:h-16" src="https://docs.hetzner.com/static/1dbc8e5220638f7193ef9f5a24c2eb5b/0b533/coolify-logo.png"/>
                     </a>
                 </div>
             </div>

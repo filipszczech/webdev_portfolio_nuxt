@@ -103,6 +103,25 @@
     const { data: projects, error: projectsError } = await useFetch('/api/projects');
     const { data: cv, error: cvError } = await useFetch('/api/cv-document');
     const { data: profile, error: profileError } = await useFetch('/api/profile');
+
+    const handleKeydown = (event) => {
+        if (event.key === 'Escape') {
+            if(isProjectModalOpen.value === true) {
+                closeProjectModal();
+            }
+            if(isCvModalOpen.value === true) {
+                closeCvModal();
+            }
+        }
+    };
+
+    onMounted(() => {
+        window.addEventListener('keydown', handleKeydown);
+    });
+
+    onBeforeUnmount(() => {
+        window.removeEventListener('keydown', handleKeydown);
+    });
     
     useHead({
         title: "Filip Szczęch | portfolio",
