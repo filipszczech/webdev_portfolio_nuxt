@@ -2,18 +2,20 @@
     <div class="grid grid-cols-3 gap-9 xl:gap-16" ref="motionTarget">
         <div class="col-span-3 lg:col-span-2 flex flex-col gap-6 text-base lg:text-lg xl:pr-16 dark:text-gray-400">
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-400">{{ $t('section_titles.my_profile') }}</h1>
-            <h2>Programista Fullstack | Specjalizuję się w Vue / Nuxt</h2>
+            <h2 class="sr-only">Programista Fullstack | Specjalizuję się w Vue / Nuxt</h2>
             <h2 class="sr-only">Tworzę strony internetowe, wizytówki, blogi, portfolio i nowoczesne aplikacje webowe.</h2>
             <div>
                 <h3 class="font-semibold">{{ $t('profile.experience.title') }}</h3>
-                <div v-for="(exp, index) in currentExperience" :key="index">
-                    <p>{{ exp.position }}</p>
-                    <p>{{ exp.company }}</p>
+                <div v-for="(exp, index) in currentExperience" :key="index" class="mt-2">
+                    <div class="flex items-center gap-2">
+                        <div class="h-2 w-2 rounded-full bg-secondary"></div>
+                        <p>{{ exp.position }}  |  {{ exp.company }}</p>
+                    </div>
                     <p>{{ exp.from }} - {{ exp.to }}</p>
                 </div>
             </div>
             <div>
-                <h3 class="font-semibold">{{ $t('profile.education.title') }}</h3>
+                <h3 class="font-semibold mb-2">{{ $t('profile.education.title') }}</h3>
                 <div v-for="(edu, index) in currentEducation" :key="index">
                     <p>{{ edu.level }}</p>
                     <p>{{ edu.field }}</p>
@@ -21,11 +23,11 @@
                 </div>
             </div>
             <div>
-                <h3 class="font-semibold">{{ $t('profile.skills.title') }}</h3>
+                <h3 class="font-semibold mb-2">{{ $t('profile.skills.title') }}</h3>
                 <p>{{ currentSkills.join(', ') }}</p>
             </div>
             <div>
-                <h3 class="font-semibold">{{ $t('profile.interests.title') }}</h3>
+                <h3 class="font-semibold mb-2">{{ $t('profile.interests.title') }}</h3>
                 <p>{{ currentInterests.join(', ') }}</p>
             </div>
         </div>

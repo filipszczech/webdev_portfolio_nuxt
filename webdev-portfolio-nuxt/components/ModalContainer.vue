@@ -6,7 +6,7 @@
         :leave="{ opacity: 0 }"
         :duration="300"
     >
-      <div class="bg-gray-100 dark:bg-gray-700 dark:text-gray-400 p-3 sm:p-6 w-[90%] max-w-2xl relative max-h-[80vh] overflow-y-scroll md:text-lg">
+      <div class="bg-gray-100 dark:bg-gray-700 dark:text-gray-400 p-3 sm:p-6 w-[90%] max-w-2xl relative max-h-[90vh] overflow-y-scroll md:text-lg">
         <button @click="closeModal" class="absolute top-3 sm:top-6 right-3 sm:right-6">✖</button>
         <main>
           <slot>

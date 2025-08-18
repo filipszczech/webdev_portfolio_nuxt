@@ -35,13 +35,13 @@
                     <div class="lg:hidden hover-scale-105 cursor-pointer" @click="toggleMenu">
                         <Icon name="mdi:hamburger-menu" size="2rem" />
                     </div>
-                    <div class="navbar-links hidden lg:flex gap-9 xl:gap-12 font-semibold text-gray-700">
+                    <div class="navbar-links hidden lg:flex gap-9 font-semibold text-gray-700">
                         <NuxtLink :to="localePath('/')" class="transition-all duration-300 hover:scale-110">
                             {{ $t('header.profile_link') }}
                         </NuxtLink>
-                        <NuxtLink :to="localePath('/oferta')" class="transition-all duration-300 hover:scale-110">
+                        <!-- <NuxtLink :to="localePath('/oferta')" class="transition-all duration-300 hover:scale-110">
                             {{ $t('header.offer_page') }}
-                        </NuxtLink>
+                        </NuxtLink> -->
                         <NuxtLink :to="localePath('/about')" class="transition-all duration-300 hover:scale-110">
                             <span>{{ $t('header.about_page') }}</span>
                         </NuxtLink>
@@ -54,11 +54,11 @@
                                     {{ $t('header.profile_link') }}
                                 </NuxtLink>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <NuxtLink :to="localePath('/oferta')" class="transition-all duration-300 hover:scale-110">
                                     {{ $t('header.offer_page') }}
                                 </NuxtLink>
-                            </li>
+                            </li> -->
                             <li>
                                 <NuxtLink :to="localePath('/about')" class="transition-all duration-300 hover:scale-110">
                                     <span>{{ $t('header.about_page') }}</span>
