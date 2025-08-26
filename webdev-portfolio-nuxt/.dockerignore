@@ -1,14 +1,8 @@
 node_modules
-npm-debug.log
-.nuxt
 .output
+.nuxt
 .git
 .gitignore
-README.md
-.env
-.env.*
-!.env.example
 Dockerfile
-.dockerignore
-.vscode
-.idea
+docker-compose*
+*.log
