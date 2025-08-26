@@ -1,3 +1,4 @@
+
 FROM node:18-alpine
 
 # Set working directory
@@ -19,8 +20,8 @@ ENV NITRO_PRESET=node-server
 # Build the application
 RUN npm run build
 
-# Remove dev dependencies after build to reduce image size
-RUN npm ci --only=production && npm cache clean --force
+# Keep all dependencies as some "dev" dependencies are needed at runtime
+RUN npm cache clean --force
 
 # Expose the port
 EXPOSE 3000
